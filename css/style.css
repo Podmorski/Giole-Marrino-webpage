@@ -2020,9 +2020,7 @@ body.intro .loader_line:after {
 		width: 100%;
 	}
 }
-@media (max-width: 1040px) {
-	body.dark .edrea_hero .overlay_color {
-	background: radial-gradient(circle at 90% 10%, rgba(3, 169, 163, 0.4), transparent 30%);
+
 }
 	.edrea_title {
 		max-width: 100%;
