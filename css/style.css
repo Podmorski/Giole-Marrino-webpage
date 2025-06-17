@@ -2321,3 +2321,46 @@ body.intro .loader_line:after {
 		padding: 0 10px;
 	}
 }
+/*---------------------------------------------------*/
+/*	Final Hero Headline Styles
+/*---------------------------------------------------*/
+
+.edrea_hero .content_in {
+    max-width: 710px; /* Re-constrain the content width */
+	text-align: left;
+}
+
+.edrea_hero .title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 110px;
+    line-height: 1.1;
+    text-shadow: none; /* Remove previous shadow */
+	margin-bottom: 0; /* Remove bottom margin to let spotify container handle it */
+}
+
+.edrea_hero .title span {
+	position: relative;
+	display: inline-block;
+}
+
+/* The decorative period */
+.edrea_hero .title span::after {
+	content: ".";
+	position: absolute;
+	right: -0.2em; /* Adjust spacing between word and period */
+	bottom: -0.05em;
+}
+
+/* Responsive adjustments for the new headline */
+@media (max-width: 1040px) {
+    .edrea_hero .title {
+        font-size: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .edrea_hero .title {
+        font-size: 60px;
+    }
+}
