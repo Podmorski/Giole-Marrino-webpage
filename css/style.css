@@ -2325,21 +2325,34 @@ body.intro .loader_line:after {
 	}
 }
 /*---------------------------------------------------*/
-/*	02) NEW HERO STYLES
+/*	Revised Hero Styles
 /*---------------------------------------------------*/
 
-.edrea_hero .hero_content {
-	width: 100%;
-	min-height: 100vh;
-	display: flex;
-	align-items: center;
+.edrea_hero .content_in {
+    max-width: 100%; /* Allow content to span the full width */
+    text-align: right; /* Align the text to the right */
 }
 
-.edrea_hero .text_wrap {
-	width: 50%;
-	padding-right: 50px;
+.edrea_hero .title {
+    font-size: 110px; /* Increased font size */
+    line-height: 1.2; /* Adjusted line height */
+    text-shadow: 0px 0px 15px rgba(0,0,0,0.5); /* Add a subtle shadow for readability */
 }
 
-.edrea_hero .image_wrap {
+/* Responsive adjustments for the new headline */
+@media (max-width: 1040px) {
+    .edrea_hero .title {
+        font-size: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .edrea_hero .content_in {
+        text-align: left; /* Center-align on smaller screens */
+    }
+    .edrea_hero .title {
+        font-size: 60px;
+    }
+}
 	width: 50%;
 }
