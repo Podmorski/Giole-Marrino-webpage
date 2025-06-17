@@ -2324,3 +2324,22 @@ body.intro .loader_line:after {
 		padding: 0 10px;
 	}
 }
+/*---------------------------------------------------*/
+/*	02) NEW HERO STYLES
+/*---------------------------------------------------*/
+
+.edrea_hero .hero_content {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+}
+
+.edrea_hero .text_wrap {
+	width: 50%;
+	padding-right: 50px;
+}
+
+.edrea_hero .image_wrap {
+	width: 50%;
+}
