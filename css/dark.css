@@ -229,8 +229,10 @@ body.dark .edrea_contact .contact_left p a{
 body.dark .edrea_contact .contact_left p a:hover{
     color: #dd4242;
 }
-/* --- LOGO Z-INDEX TEST --- */
-.edrea_topbar .logo {
-    position: relative; /* This is required for z-index to work */
-    z-index: 99999 !important;
+/* --- LOGO SIZE & LAYOUT TEST --- */
+.edrea_topbar .logo svg,
+.edrea_mobile_menu .logo svg {
+    height: 50px !important;
+    width: 100px !important;
+    background-color: red !important; /* This is to see the element's box */
 }
