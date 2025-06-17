@@ -229,3 +229,9 @@ body.dark .edrea_contact .contact_left p a{
 body.dark .edrea_contact .contact_left p a:hover{
     color: #dd4242;
 }
+/* --- LOGO VISIBILITY TEST --- */
+.edrea_topbar .logo,
+.edrea_mobile_menu .logo {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
