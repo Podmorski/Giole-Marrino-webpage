@@ -443,11 +443,13 @@
   $(document).ready(function () {
     // initialization
     EdreaObject.init();
-
-    $(window).load("body", function () {
+	
+    // This is the corrected line
+    $(window).on('load', function () {
       EdreaObject.run_preloader();
     });
   });
+
 })(jQuery);
 
 jQuery(".anchor_nav").onePageNav();
