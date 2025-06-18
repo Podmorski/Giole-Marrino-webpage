@@ -2346,7 +2346,7 @@ body.intro .loader_line:after {
     /* Font Styling */
     font-family: 'Poppins', sans-serif;
     font-weight: 900;
-    font-size: 110px;
+    font-size: 130px;
     line-height: 0.9;
     color: #fff;
     text-shadow: 0px 0px 15px rgba(0,0,0,0.5);
@@ -2376,7 +2376,7 @@ body.intro .loader_line:after {
 
 @media (max-width: 768px) {
     .edrea_hero .title {
-        font-size: 55px; /* Scaled down for mobile */
+        font-size: 70px; /* Scaled down for mobile */
         bottom: 222px; /* Adjusts for player's new position: 30 + 152 + 40 */
     }
     .spotify-container {
