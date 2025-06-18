@@ -2323,7 +2323,7 @@ body.intro .loader_line:after {
 }
 
 /*---------------------------------------------------*/
-/*	Final Hero Layout (Absolutely Positioned)
+/*	Final Hero Layout V4 (Corrected Responsive)
 /*---------------------------------------------------*/
 
 /* Make the hero section a positioning container */
@@ -2331,22 +2331,24 @@ body.intro .loader_line:after {
 	position: relative;
 	width: 100%;
 	height: 100vh;
+	overflow: hidden; /* Prevents content from spilling out */
 }
 
 /* Position the headline block on the LEFT side */
 .hero_headline_wrap {
 	position: absolute;
-	top: 55%;
-	left: 150px; /* Adjust this to change distance from the left edge */
-	width: 45%; /* Give the block a width */
+	top: 60%;
+	left: 170px;
+	width: 45%;
 	transform: translateY(-50%);
+	z-index: 5;
 }
 
 /* Style the headline text and align it to the RIGHT */
 .hero_headline_wrap .title {
     font-family: 'Poppins', sans-serif;
     font-weight: 900;
-    font-size: 120px;
+    font-size: 110px;
     line-height: 0.9;
     text-align: right;
 	color: #fff;
@@ -2355,41 +2357,47 @@ body.intro .loader_line:after {
 /* Position and style the Spotify player block */
 .hero_spotify_wrap {
 	position: absolute;
-	bottom: 50px; /* Distance from the bottom */
+	bottom: 50px;
 	left: 50%;
 	transform: translateX(-50%);
 	width: 90%;
-	max-width: 720px; /* Makes it wider */
+	max-width: 720px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 1040px) {
-    .hero_headline_wrap .title {
-        font-size: 80px;
+/* === CORRECTED RESPONSIVE BREAKPOINTS === */
+
+/* For Laptops and Smaller Desktops */
+@media (max-width: 1440px) {
+	.hero_headline_wrap .title {
+        font-size: 90px;
     }
-	.hero_headline_wrap {
-		width: 60%;
-	}
 }
 
-@media (max-width: 768px) {
+/* For Tablets in Landscape */
+@media (max-width: 1040px) {
     .hero_headline_wrap {
-		position: relative;
-		width: 100%;
-		left: 0;
-		top: 0;
-		transform: none;
-		padding: 120px 20px 40px 20px;
+		width: 55%;
+		left: 20px;
 	}
 	.hero_headline_wrap .title {
-        font-size: 60px;
-        text-align: center;
+        font-size: 70px;
+    }
+}
+
+/* For Tablets in Portrait and Mobile Phones */
+@media (max-width: 768px) {
+    .hero_headline_wrap {
+		width: 90%;
+		left: 5%;
+		top: 40%; /* Move higher on the screen */
+		text-align: center; /* Center text on mobile */
+	}
+	.hero_headline_wrap .title {
+        font-size: 54px; /* Make font size much smaller for mobile */
+		text-align: center;
     }
 	.hero_spotify_wrap {
-		position: relative;
-		bottom: 0;
-		left: 0;
-		transform: none;
-		padding: 0 20px 40px 20px;
+		bottom: 30px; /* Adjust spotify position for mobile */
+		max-width: 90%;
 	}
 }
