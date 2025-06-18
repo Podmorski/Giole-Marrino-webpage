@@ -2337,7 +2337,7 @@ body.intro .loader_line:after {
 .hero_headline_wrap {
 	position: absolute;
 	top: 55%;
-	left: 90px; /* Adjust this to change distance from the left edge */
+	left: 150px; /* Adjust this to change distance from the left edge */
 	width: 45%; /* Give the block a width */
 	transform: translateY(-50%);
 }
