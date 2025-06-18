@@ -22,31 +22,52 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 
 	<style>
-    /* This rule adjusts the spacing and background */
-    .edrea_social_icons {
-        padding: 10px 0 10px 0; /* Increased top padding to move icons down by 90px */
-        text-align: center;
-        background-color: #000;
-    }
-
-    /* This rule sets the icon color to white */
-    .edrea_social_icons .footer-icons ul li a i {
-        font-size: 28px;
-        color: #FFFFFF; /* Changed to white */
-        transition: color 0.3s ease;
-    }
-
-    /* This rule keeps the hover effect */
-    .edrea_social_icons .footer-icons ul li a:hover i {
-        color: #dd4242; /* Theme's red accent color */
-    }
-
     /* This rule keeps the other page sections black */
     .edrea_about,
     .edrea_portfolio,
     .edrea_contact,
     .edrea_footer {
            background-color: #000;
+    }
+
+    /* --- Fix for Modal Background Scrolling (Forceful) --- */
+    body.modal {
+        overflow: hidden !important;
+    }
+
+    /* --- Custom Style for Music Section Description --- */
+    .music-description {
+        max-width: 650px; /* Constrains the width to force two lines */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* --- Social Icons Strip (Under Hero) --- */
+    .edrea_social_icons {
+        padding: 100px 0 80px 0; /* Adjusted padding */
+        text-align: center;
+        background-color: #000;
+    }
+
+    .edrea_social_icons .footer-icons ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .edrea_social_icons .footer-icons i {
+        font-size: 28px;
+        color: #FFFFFF;
+        transition: color 0.3s ease;
+    }
+
+    .edrea_social_icons .footer-icons a:hover i {
+        color: #dd4242;
     }
 </style>
 </head>
