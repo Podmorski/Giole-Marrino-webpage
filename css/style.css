@@ -2323,45 +2323,73 @@ body.intro .loader_line:after {
 }
 
 /*---------------------------------------------------*/
-/*	Final Centered Hero Block
+/*	Final Hero Layout (Absolutely Positioned)
 /*---------------------------------------------------*/
 
-/* This rule centers the main content block on the page */
-.edrea_hero .content_in {
-    margin-left: auto;
-    margin-right: auto;
-	/* This aligns the text within the block to the left */
-    text-align: left;
+/* Make the hero section a positioning container */
+.edrea_hero .content {
+	position: relative;
+	width: 100%;
+	height: 100vh;
 }
 
-/* This rule styles the headline as requested */
-.edrea_hero .title {
+/* Position the headline block on the LEFT side */
+.hero_headline_wrap {
+	position: absolute;
+	top: 50%;
+	left: 40px; /* Adjust this to change distance from the left edge */
+	width: 45%; /* Give the block a width */
+	transform: translateY(-50%);
+}
+
+/* Style the headline text and align it to the RIGHT */
+.hero_headline_wrap .title {
     font-family: 'Poppins', sans-serif;
     font-weight: 900;
     font-size: 110px;
-    line-height: 1.1;
-    text-shadow: 0px 0px 15px rgba(0,0,0,0.5); /* Adds a subtle shadow for better readability */
+    line-height: 1.0;
+    text-align: right;
+	color: #fff;
 }
 
-/* This rule ensures the spotify container has the proper spacing */
-.spotify-container {
-    margin-top: 40px;
+/* Position and style the Spotify player block */
+.hero_spotify_wrap {
+	position: absolute;
+	bottom: 50px; /* Distance from the bottom */
+	left: 50%;
+	transform: translateX(-50%);
+	width: 90%;
+	max-width: 720px; /* Makes it wider */
 }
 
-
-/* Responsive adjustments for smaller screens */
+/* Responsive adjustments */
 @media (max-width: 1040px) {
-    .edrea_hero .title {
+    .hero_headline_wrap .title {
         font-size: 80px;
     }
+	.hero_headline_wrap {
+		width: 60%;
+	}
 }
 
 @media (max-width: 768px) {
-    /* On mobile, we can re-center the text for a cleaner look */
-    .edrea_hero .content_in {
-       text-align: center;
-    }
-    .edrea_hero .title {
+    .hero_headline_wrap {
+		position: relative;
+		width: 100%;
+		left: 0;
+		top: 0;
+		transform: none;
+		padding: 120px 20px 40px 20px;
+	}
+	.hero_headline_wrap .title {
         font-size: 60px;
+        text-align: center;
     }
+	.hero_spotify_wrap {
+		position: relative;
+		bottom: 0;
+		left: 0;
+		transform: none;
+		padding: 0 20px 40px 20px;
+	}
 }
