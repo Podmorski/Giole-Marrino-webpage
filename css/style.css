@@ -2323,26 +2323,25 @@ body.intro .loader_line:after {
 }
 
 /*---------------------------------------------------*/
-/*	Final Hero Style
+/*	Final Centered Hero
 /*---------------------------------------------------*/
 
-/* This rule centers the entire content block */
+/* This centers the entire content block on all screens */
 .edrea_hero .content_in {
 	text-align: center;
 }
 
-/* This rule styles the headline */
+/* This styles the headline */
 .edrea_hero .title {
     font-family: 'Poppins', sans-serif;
     font-weight: 900;
-    font-size: 110px;
-    line-height: 0.9;
+    font-size: 100px;
+    line-height: 1.1;
 	color: #fff;
     text-shadow: 0px 0px 15px rgba(0,0,0,0.5);
 }
 
-
-/* Responsive adjustments */
+/* Responsive font size adjustments */
 @media (max-width: 1040px) {
     .edrea_hero .title {
         font-size: 80px;
