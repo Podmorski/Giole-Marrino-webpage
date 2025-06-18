@@ -2386,10 +2386,12 @@ body.intro .loader_line:after {
         bottom: 30px;
     }
 }
-/* --- Custom Footer Styles --- */
-.footer-content-centered {
-    display: flex;
+/* --- Custom Footer Styles (Updated) --- */
+
+/* This more specific rule ensures the centered, stacked layout */
+.edrea_footer .content.footer-content-centered {
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     padding: 20px 0;
 }
@@ -2398,20 +2400,22 @@ body.intro .loader_line:after {
     margin-bottom: 25px; /* Buffer between icons and text */
 }
 
-/* Style for the Font Awesome icons in the footer */
+/* Style for the Font Awesome icons - NOW WHITE */
 .footer-content-centered .footer-icons i {
     font-size: 24px;
-    color: #bfbfbf;
+    color: #FFFFFF; /* Changed to white */
     transition: color 0.3s ease;
 }
 
-/* Hover style for the Font Awesome icons in the footer */
+/* Hover style for the Font Awesome icons */
 .footer-content-centered .footer-icons a:hover i {
-    color: #dd4242; /* Red accent color */
+    color: #dd4242; /* Red accent color on hover remains */
 }
 
+/* Style for the copyright text - NOW WHITE */
 .footer-content-centered .copyright_text p {
     text-align: center;
     margin: 0;
     line-height: 1.6;
+    color: #FFFFFF; /* Changed to white */
 }
