@@ -2323,24 +2323,32 @@ body.intro .loader_line:after {
 }
 
 /*---------------------------------------------------*/
-/*	Centered Hero Content & Headline Style
+/*	Final Hero Section Styling
 /*---------------------------------------------------*/
 
+/* 1. Repositions the content block to the left */
 .edrea_hero .content_in {
-    margin-left: auto;   /* This, with the next line, centers the block */
+    margin-left: 0;
     margin-right: auto;
-	text-align: center; /* This centers the headline and Spotify embed inside the block */
+    text-align: left; /* Aligns the text and Spotify embed to the left */
 }
 
+/* 2. Restyles the headline */
 .edrea_hero .title {
     font-family: 'Poppins', sans-serif;
     font-weight: 900;
     font-size: 110px;
-    line-height: 1.1;
-    text-shadow: 0px 0px 15px rgba(0,0,0,0.5); /* Adds a subtle shadow for readability */
+    line-height: 1.0; /* This brings the two lines closer together */
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.3); /* Adds a subtle shadow for better readability */
 }
 
-/* Responsive adjustments for the headline */
+/* 3. Adds space above the Spotify embed */
+.spotify-container {
+    margin-top: 40px;
+}
+
+
+/* Responsive adjustments for smaller screens */
 @media (max-width: 1040px) {
     .edrea_hero .title {
         font-size: 80px;
@@ -2348,8 +2356,11 @@ body.intro .loader_line:after {
 }
 
 @media (max-width: 768px) {
+    /* On mobile, we re-center the content block */
     .edrea_hero .content_in {
-       max-width: 90%; /* Use more of the screen on mobile */
+        margin-left: auto;
+        margin-right: auto;
+       text-align: center;
     }
     .edrea_hero .title {
         font-size: 60px;
