@@ -2323,16 +2323,13 @@ body.intro .loader_line:after {
 }
 
 /*---------------------------------------------------*/
-/*	Final Hero Style V3 (Corrected Centering)
+/*	Final Hero Layout V5 (Consistent Spotify Position)
 /*---------------------------------------------------*/
 
-/* This rule now only centers the text inside the block.
-   The positioning context has been removed to allow the spotify
-   player to be centered relative to the full page. */
+/* This rule centers the text and adds padding to prevent overlap with the player */
 .edrea_hero .content_in {
 	text-align: center;
-    /* Padding is still needed to prevent the headline from overlapping the player on short screens */
-    padding-bottom: 222px;
+    padding-bottom: 232px; /* (Player height 152px + bottom 50px + buffer 30px) */
 }
 
 /* This rule styles the headline */
@@ -2345,14 +2342,14 @@ body.intro .loader_line:after {
     text-shadow: 0px 0px 15px rgba(0,0,0,0.5);
 }
 
-/* This rule positions the Spotify player at the bottom, centered on the PAGE */
+/* This rule positions the Spotify player at the bottom on ALL screens */
 .spotify-container {
     position: absolute;
-	bottom: 40px;
+	bottom: 50px; /* New 50px value */
 	left: 50%;
 	transform: translateX(-50%);
 	width: 90%;
-    max-width: 550px;
+    max-width: 720px; /* New wider value */
 	margin-top: 0;
 }
 
@@ -2365,16 +2362,15 @@ body.intro .loader_line:after {
 }
 
 @media (max-width: 768px) {
-    /* On mobile, revert to a simple stacked layout */
-	.edrea_hero .content_in {
-		padding-bottom: 0;
-	}
+    .edrea_hero .content_in {
+        /* Adjust padding to account for player's new position on mobile */
+        padding-bottom: 222px; 
+    }
     .edrea_hero .title {
         font-size: 50px;
     }
 	.spotify-container {
-		position: static; /* Let it sit naturally below the headline */
-		transform: none;
-		margin-top: 40px; /* Add space back between elements */
+		/* Keeps the same consistent positioning, just a bit closer to the bottom on mobile */
+		bottom: 30px; 
 	}
 }
