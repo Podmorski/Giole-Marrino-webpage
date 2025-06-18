@@ -2323,31 +2323,29 @@ body.intro .loader_line:after {
 }
 
 /*---------------------------------------------------*/
-/*	Final Hero Style & Mixed Alignment
+/*	Final Centered Hero Block
 /*---------------------------------------------------*/
 
 /* This rule centers the main content block on the page */
 .edrea_hero .content_in {
     margin-left: auto;
     margin-right: auto;
+	/* This aligns the text within the block to the left */
+    text-align: left;
 }
 
-/* This rule styles the headline and aligns it to the RIGHT */
+/* This rule styles the headline as requested */
 .edrea_hero .title {
     font-family: 'Poppins', sans-serif;
     font-weight: 900;
     font-size: 110px;
     line-height: 1.1;
-    text-shadow: 0px 0px 15px rgba(0,0,0,0.5);
-    text-align: right;
+    text-shadow: 0px 0px 15px rgba(0,0,0,0.5); /* Adds a subtle shadow for better readability */
 }
 
-/* This rule centers the Spotify player and gives it space */
+/* This rule ensures the spotify container has the proper spacing */
 .spotify-container {
     margin-top: 40px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 450px; /* Sets a nice width for the centered player */
 }
 
 
@@ -2359,12 +2357,11 @@ body.intro .loader_line:after {
 }
 
 @media (max-width: 768px) {
-    /* On mobile, we center both the headline and spotify player for a clean look */
+    /* On mobile, we can re-center the text for a cleaner look */
     .edrea_hero .content_in {
-       max-width: 90%;
+       text-align: center;
     }
     .edrea_hero .title {
         font-size: 60px;
-        text-align: center;
     }
 }
