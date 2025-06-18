@@ -2323,54 +2323,64 @@ body.intro .loader_line:after {
 }
 
 /*---------------------------------------------------*/
-/*	Final Hero Layout V5 (Consistent Spotify Position)
+/*	Final Hero Layout
 /*---------------------------------------------------*/
 
-/* This rule centers the text and adds padding to prevent overlap with the player */
+/* The main content area no longer needs padding to avoid the player */
 .edrea_hero .content_in {
-	text-align: center;
-    padding-bottom: 232px; /* (Player height 152px + bottom 50px + buffer 30px) */
+    padding-bottom: 0;
+    text-align: left; /* Set alignment for the container */
 }
 
-/* This rule styles the headline */
+/* This rule styles and positions the headline */
 .edrea_hero .title {
+    /* Positioning */
+    position: absolute;
+    bottom: 242px; /* Spotify bottom (50) + Spotify height (152) + Gap (40) */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 720px;
+    text-align: left; /* Align text to the left within its positioned box */
+
+    /* Font Styling */
     font-family: 'Poppins', sans-serif;
     font-weight: 900;
-    font-size: 100px;
-    line-height: 1.1;
-	color: #fff;
+    font-size: 110px;
+    line-height: 0.9;
+    color: #fff;
     text-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+
+    /* Remove default margins */
+    margin: 0;
 }
 
-/* This rule positions the Spotify player at the bottom on ALL screens */
+/* This rule keeps the Spotify player centered at the bottom */
 .spotify-container {
     position: absolute;
-	bottom: 50px; /* New 50px value */
-	left: 50%;
-	transform: translateX(-50%);
-	width: 90%;
-    max-width: 720px; /* New wider value */
-	margin-top: 0;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 720px;
+    margin-top: 0;
 }
 
 
 /* Responsive adjustments */
 @media (max-width: 1040px) {
     .edrea_hero .title {
-        font-size: 80px;
+        font-size: 88px; /* Scaled down from 110px */
     }
 }
 
 @media (max-width: 768px) {
-    .edrea_hero .content_in {
-        /* Adjust padding to account for player's new position on mobile */
-        padding-bottom: 222px; 
-    }
     .edrea_hero .title {
-        font-size: 50px;
+        font-size: 55px; /* Scaled down for mobile */
+        bottom: 222px; /* Adjusts for player's new position: 30 + 152 + 40 */
     }
-	.spotify-container {
-		/* Keeps the same consistent positioning, just a bit closer to the bottom on mobile */
-		bottom: 30px; 
-	}
+    .spotify-container {
+        /* This rule from the original file ensures the player moves up slightly on mobile */
+        bottom: 30px;
+    }
 }
