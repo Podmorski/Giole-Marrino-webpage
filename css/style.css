@@ -2378,7 +2378,7 @@ body.intro .loader_line:after {
     .edrea_hero .title {
         font-size: 70px; /* Scaled down for mobile */
         bottom: 222px; /* Adjusts for player's new position: 30 + 152 + 40 */
-        left: 40%;
+        left: 55%;
     }
     .spotify-container {
         /* This rule from the original file ensures the player moves up slightly on mobile */
