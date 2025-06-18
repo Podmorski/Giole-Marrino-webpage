@@ -22,30 +22,33 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 
 	<style>
-		.edrea_social_icons {
-			padding: 40px 0;
-			text-align: center;
-			background-color: #000;
-               
-		}
-                .edrea_about,
-                .edrea_portfolio,
-                .edrea_contact,
-                .edrea_footer {
-                       background-color: #000;
-                }
-		.edrea_social_icons .footer-icons ul {
-			justify-content: center;
-		}
-		.edrea_social_icons .footer-icons ul li a i {
-			font-size: 28px;
-			color: #bfbfbf;
-			transition: color 0.3s ease;
-		}
-		.edrea_social_icons .footer-icons ul li a:hover i {
-			color: #dd4242; /* Theme's red accent color */
-		}
-	</style>
+    /* This rule adjusts the spacing and background */
+    .edrea_social_icons {
+        padding: 130px 0 60px 0; /* Increased top padding to move icons down by 90px */
+        text-align: center;
+        background-color: #000;
+    }
+
+    /* This rule sets the icon color to white */
+    .edrea_social_icons .footer-icons ul li a i {
+        font-size: 28px;
+        color: #FFFFFF; /* Changed to white */
+        transition: color 0.3s ease;
+    }
+
+    /* This rule keeps the hover effect */
+    .edrea_social_icons .footer-icons ul li a:hover i {
+        color: #dd4242; /* Theme's red accent color */
+    }
+
+    /* This rule keeps the other page sections black */
+    .edrea_about,
+    .edrea_portfolio,
+    .edrea_contact,
+    .edrea_footer {
+           background-color: #000;
+    }
+</style>
 </head>
 
 <body class="dark">
