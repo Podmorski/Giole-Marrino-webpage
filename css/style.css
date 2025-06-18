@@ -2323,93 +2323,34 @@ body.intro .loader_line:after {
 }
 
 /*---------------------------------------------------*/
-/*	Final Hero Layout V4 (Corrected Mobile)
+/*	Final Hero Style
 /*---------------------------------------------------*/
 
-/* Make the hero section a positioning container */
-.edrea_hero .content {
-	position: relative;
-	width: 100%;
-	height: 100vh;
-	overflow: hidden; /* Prevents content from spilling out */
+/* This rule centers the entire content block */
+.edrea_hero .content_in {
+	text-align: center;
 }
 
-/* Position the headline block on the LEFT side for Desktops */
-.hero_headline_wrap {
-	position: absolute;
-	top: 55%;
-	left: 180px;
-	width: 45%;
-	transform: translateY(-50%);
-	z-index: 5;
-}
-
-/* Style the headline text and align it to the RIGHT */
-.hero_headline_wrap .title {
+/* This rule styles the headline */
+.edrea_hero .title {
     font-family: 'Poppins', sans-serif;
     font-weight: 900;
     font-size: 110px;
     line-height: 0.9;
-    text-align: right;
 	color: #fff;
+    text-shadow: 0px 0px 15px rgba(0,0,0,0.5);
 }
 
-/* Position and style the Spotify player block */
-.hero_spotify_wrap {
-	position: absolute;
-	bottom: 50px;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 90%;
-	max-width: 720px;
-}
 
-/* === CORRECTED RESPONSIVE BREAKPOINTS === */
-
-/* For Laptops and Smaller Desktops */
-@media (max-width: 1440px) {
-	.hero_headline_wrap {
-        width: 50%;
-    }
-	.hero_headline_wrap .title {
-        font-size: 90px;
-    }
-}
-
-/* For Tablets in Landscape */
+/* Responsive adjustments */
 @media (max-width: 1040px) {
-    .hero_headline_wrap {
-		width: 55%;
-		left: 20px;
-	}
-	.hero_headline_wrap .title {
-        font-size: 70px;
+    .edrea_hero .title {
+        font-size: 80px;
     }
 }
 
-/* For Tablets in Portrait and Mobile Phones (NEW FLEXBOX LAYOUT) */
 @media (max-width: 768px) {
-	.edrea_hero .content {
-		display: flex;
-		flex-direction: column;
-		justify-content: center; /* This will vertically center the content */
-		align-items: center;
-		padding: 40px 20px;
-	}
-    .hero_headline_wrap {
-		position: static; /* Removes absolute positioning */
-		width: 100%;
-		transform: none; /* Resets transform */
-		margin-bottom: 30px; /* Adds space between headline and spotify */
-	}
-	.hero_headline_wrap .title {
-        font-size: 58px; /* Increased font size for mobile */
-        text-align: center; /* Center text on mobile */
+    .edrea_hero .title {
+        font-size: 50px;
     }
-	.hero_spotify_wrap {
-		position: static; /* Removes absolute positioning */
-		transform: none; /* Resets transform */
-		width: 100%;
-		max-width: 95%;
-	}
 }
