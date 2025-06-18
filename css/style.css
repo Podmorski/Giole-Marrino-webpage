@@ -2391,7 +2391,7 @@ body.intro .loader_line:after {
 /* Social Icons Strip (Under Hero) */
 .edrea_social_icons {
     background-color: #000;
-    padding: 80px 0 60px 0; /* Pushes the bar down from the element above */
+    padding: 10px 0 10px 0; /* Pushes the bar down from the element above */
     text-align: center;
 }
 
