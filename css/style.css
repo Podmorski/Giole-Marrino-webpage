@@ -2336,8 +2336,8 @@ body.intro .loader_line:after {
 /* Position the headline block on the LEFT side */
 .hero_headline_wrap {
 	position: absolute;
-	top: 50%;
-	left: 40px; /* Adjust this to change distance from the left edge */
+	top: 70%;
+	left: 60px; /* Adjust this to change distance from the left edge */
 	width: 45%; /* Give the block a width */
 	transform: translateY(-50%);
 }
@@ -2346,8 +2346,8 @@ body.intro .loader_line:after {
 .hero_headline_wrap .title {
     font-family: 'Poppins', sans-serif;
     font-weight: 900;
-    font-size: 110px;
-    line-height: 1.0;
+    font-size: 120px;
+    line-height: 0.9;
     text-align: right;
 	color: #fff;
 }
