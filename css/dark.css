@@ -56,7 +56,7 @@ body.dark .loader_line:after{
 }
 body.dark{
 	background-color: #000; /* CHANGED FROM #111319 */
-        color: #A9AFC3
+        color: #A9AFC3;
 	
 }
 body.dark::-webkit-scrollbar {
