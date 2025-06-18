@@ -2323,15 +2323,17 @@ body.intro .loader_line:after {
 }
 
 /*---------------------------------------------------*/
-/*	Final Centered Hero
+/*	Final Hero Style V2 (Absolute Positioned Spotify)
 /*---------------------------------------------------*/
 
-/* This centers the entire content block on all screens */
+/* This rule centers content and creates a positioning context */
 .edrea_hero .content_in {
 	text-align: center;
+	position: relative;
+	padding-bottom: 222px; /* Adds space at the bottom for the absolute positioned player (152px player height + 40px bottom + 30px buffer) */
 }
 
-/* This styles the headline */
+/* This rule styles the headline */
 .edrea_hero .title {
     font-family: 'Poppins', sans-serif;
     font-weight: 900;
@@ -2341,7 +2343,19 @@ body.intro .loader_line:after {
     text-shadow: 0px 0px 15px rgba(0,0,0,0.5);
 }
 
-/* Responsive font size adjustments */
+/* This rule positions the Spotify player */
+.spotify-container {
+    position: absolute;
+	bottom: 40px; /* Locks it 40px from the bottom */
+	left: 50%;
+	transform: translateX(-50%); /* Centers it horizontally */
+	width: 90%;
+    max-width: 550px;
+	margin-top: 0; /* Resets the old margin rule */
+}
+
+
+/* Responsive adjustments */
 @media (max-width: 1040px) {
     .edrea_hero .title {
         font-size: 80px;
@@ -2349,7 +2363,16 @@ body.intro .loader_line:after {
 }
 
 @media (max-width: 768px) {
+    /* On mobile, revert to a simple stacked layout */
+	.edrea_hero .content_in {
+		padding-bottom: 0; /* Reset the padding */
+	}
     .edrea_hero .title {
         font-size: 50px;
     }
+	.spotify-container {
+		position: static; /* Let it sit naturally below the headline */
+		transform: none;
+		margin-top: 40px; /* Add space back between elements */
+	}
 }
