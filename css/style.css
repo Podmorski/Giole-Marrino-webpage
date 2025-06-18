@@ -2456,3 +2456,9 @@ body.intro .loader_line:after {
     line-height: 1.6;
     color: #FFFFFF;
 }
+/* --- Custom Style for Music Section Description --- */
+.music-description {
+    max-width: 650px; /* Adjust this value if you want the line break at a different point */
+    margin-left: auto;
+    margin-right: auto;
+}
