@@ -2323,7 +2323,7 @@ body.intro .loader_line:after {
 }
 
 /*---------------------------------------------------*/
-/*	Final Hero Layout V4 (Corrected Responsive)
+/*	Final Hero Layout V4 (Corrected Mobile)
 /*---------------------------------------------------*/
 
 /* Make the hero section a positioning container */
@@ -2334,11 +2334,11 @@ body.intro .loader_line:after {
 	overflow: hidden; /* Prevents content from spilling out */
 }
 
-/* Position the headline block on the LEFT side */
+/* Position the headline block on the LEFT side for Desktops */
 .hero_headline_wrap {
 	position: absolute;
-	top: 60%;
-	left: 170px;
+	top: 50%;
+	left: 40px;
 	width: 45%;
 	transform: translateY(-50%);
 	z-index: 5;
@@ -2349,7 +2349,7 @@ body.intro .loader_line:after {
     font-family: 'Poppins', sans-serif;
     font-weight: 900;
     font-size: 110px;
-    line-height: 0.9;
+    line-height: 1.0;
     text-align: right;
 	color: #fff;
 }
@@ -2368,6 +2368,9 @@ body.intro .loader_line:after {
 
 /* For Laptops and Smaller Desktops */
 @media (max-width: 1440px) {
+	.hero_headline_wrap {
+        width: 50%;
+    }
 	.hero_headline_wrap .title {
         font-size: 90px;
     }
@@ -2384,20 +2387,29 @@ body.intro .loader_line:after {
     }
 }
 
-/* For Tablets in Portrait and Mobile Phones */
+/* For Tablets in Portrait and Mobile Phones (NEW FLEXBOX LAYOUT) */
 @media (max-width: 768px) {
+	.edrea_hero .content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center; /* This will vertically center the content */
+		align-items: center;
+		padding: 40px 20px;
+	}
     .hero_headline_wrap {
-		width: 90%;
-		left: 5%;
-		top: 40%; /* Move higher on the screen */
-		text-align: center; /* Center text on mobile */
+		position: static; /* Removes absolute positioning */
+		width: 100%;
+		transform: none; /* Resets transform */
+		margin-bottom: 30px; /* Adds space between headline and spotify */
 	}
 	.hero_headline_wrap .title {
-        font-size: 54px; /* Make font size much smaller for mobile */
-		text-align: center;
+        font-size: 58px; /* Increased font size for mobile */
+        text-align: center; /* Center text on mobile */
     }
 	.hero_spotify_wrap {
-		bottom: 30px; /* Adjust spotify position for mobile */
-		max-width: 90%;
+		position: static; /* Removes absolute positioning */
+		transform: none; /* Resets transform */
+		width: 100%;
+		max-width: 95%;
 	}
 }
