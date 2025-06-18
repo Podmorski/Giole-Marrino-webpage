@@ -2386,9 +2386,38 @@ body.intro .loader_line:after {
         bottom: 30px;
     }
 }
-/* --- Custom Footer Styles (Updated) --- */
+/* --- Custom Styles --- */
 
-/* This more specific rule ensures the centered, stacked layout */
+/* Social Icons Strip (Under Hero) */
+.edrea_social_icons {
+    background-color: #000;
+    padding: 80px 0 60px 0; /* Pushes the bar down from the element above */
+    text-align: center;
+}
+
+.edrea_social_icons .footer-icons ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.edrea_social_icons .footer-icons i {
+    font-size: 28px;
+    color: #FFFFFF; /* Sets the icon color to white */
+    transition: color 0.3s ease;
+}
+
+.edrea_social_icons .footer-icons a:hover i {
+    color: #dd4242; /* Keeps the red hover effect */
+}
+
+
+/* Centered Footer Layout */
 .edrea_footer .content.footer-content-centered {
     flex-direction: column;
     justify-content: center;
@@ -2397,25 +2426,33 @@ body.intro .loader_line:after {
 }
 
 .footer-content-centered .footer-icons {
-    margin-bottom: 25px; /* Buffer between icons and text */
+    margin-bottom: 25px; 
 }
 
-/* Style for the Font Awesome icons - NOW WHITE */
+.footer-content-centered .footer-icons ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
 .footer-content-centered .footer-icons i {
     font-size: 24px;
-    color: #FFFFFF; /* Changed to white */
+    color: #FFFFFF;
     transition: color 0.3s ease;
 }
 
-/* Hover style for the Font Awesome icons */
 .footer-content-centered .footer-icons a:hover i {
-    color: #dd4242; /* Red accent color on hover remains */
+    color: #dd4242;
 }
 
-/* Style for the copyright text - NOW WHITE */
 .footer-content-centered .copyright_text p {
     text-align: center;
     margin: 0;
     line-height: 1.6;
-    color: #FFFFFF; /* Changed to white */
+    color: #FFFFFF;
 }
