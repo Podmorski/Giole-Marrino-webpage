@@ -2323,14 +2323,16 @@ body.intro .loader_line:after {
 }
 
 /*---------------------------------------------------*/
-/*	Final Hero Style V2 (Absolute Positioned Spotify)
+/*	Final Hero Style V3 (Corrected Centering)
 /*---------------------------------------------------*/
 
-/* This rule centers content and creates a positioning context */
+/* This rule now only centers the text inside the block.
+   The positioning context has been removed to allow the spotify
+   player to be centered relative to the full page. */
 .edrea_hero .content_in {
 	text-align: center;
-	position: relative;
-	padding-bottom: 222px; /* Adds space at the bottom for the absolute positioned player (152px player height + 40px bottom + 30px buffer) */
+    /* Padding is still needed to prevent the headline from overlapping the player on short screens */
+    padding-bottom: 222px;
 }
 
 /* This rule styles the headline */
@@ -2343,15 +2345,15 @@ body.intro .loader_line:after {
     text-shadow: 0px 0px 15px rgba(0,0,0,0.5);
 }
 
-/* This rule positions the Spotify player */
+/* This rule positions the Spotify player at the bottom, centered on the PAGE */
 .spotify-container {
     position: absolute;
-	bottom: 40px; /* Locks it 40px from the bottom */
+	bottom: 40px;
 	left: 50%;
-	transform: translateX(-50%); /* Centers it horizontally */
+	transform: translateX(-50%);
 	width: 90%;
     max-width: 550px;
-	margin-top: 0; /* Resets the old margin rule */
+	margin-top: 0;
 }
 
 
@@ -2365,7 +2367,7 @@ body.intro .loader_line:after {
 @media (max-width: 768px) {
     /* On mobile, revert to a simple stacked layout */
 	.edrea_hero .content_in {
-		padding-bottom: 0; /* Reset the padding */
+		padding-bottom: 0;
 	}
     .edrea_hero .title {
         font-size: 50px;
