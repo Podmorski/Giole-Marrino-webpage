@@ -55,8 +55,9 @@ body.dark .loader_line:after{
     animation-delay: 2000ms;
 }
 body.dark{
-	background-color: #111319;
-	color: #A9AFC3;
+	background-color: #000; /* CHANGED FROM #111319 */
+        color: #A9AFC3
+	
 }
 body.dark::-webkit-scrollbar {
   width: 11px;
