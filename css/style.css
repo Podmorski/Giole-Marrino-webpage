@@ -2337,8 +2337,8 @@ body.intro .loader_line:after {
 /* Position the headline block on the LEFT side for Desktops */
 .hero_headline_wrap {
 	position: absolute;
-	top: 60%;
-	left: 200px;
+	top: 55%;
+	left: 180px;
 	width: 45%;
 	transform: translateY(-50%);
 	z-index: 5;
