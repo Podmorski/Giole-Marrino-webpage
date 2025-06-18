@@ -127,12 +127,7 @@ body.dark .edrea_topbar ul li a:hover{
 body.dark .edrea_topbar .menu .ccc{
 	background-color: #DD4242;
 }
-body.dark .edrea_about,
-body.dark .edrea_information,
-body.dark .edrea_testimonials,
-body.dark .edrea_contact{
-	background-color: #191C26;
-}
+
 body.dark .edrea_title.bg_white .sub_text span{
 	background-color: #191C26;
 }
