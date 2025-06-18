@@ -2371,6 +2371,7 @@ body.intro .loader_line:after {
 @media (max-width: 1040px) {
     .edrea_hero .title {
         font-size: 100px; /* Scaled down from 110px */
+        left: 55%;
     }
 }
 
