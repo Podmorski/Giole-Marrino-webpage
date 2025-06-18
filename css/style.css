@@ -2323,54 +2323,89 @@ body.intro .loader_line:after {
 }
 
 /*---------------------------------------------------*/
-/*	Final Hero Layout V5 (Consistent Spotify Position)
+/*	Final Hero Layout V6 (Consistent Absolute Positioning)
 /*---------------------------------------------------*/
 
-/* This rule centers the text and adds padding to prevent overlap with the player */
+/* This makes the hero section a positioning container */
+.edrea_hero .content {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+
+/* This container is no longer needed for positioning */
 .edrea_hero .content_in {
-	text-align: center;
-    padding-bottom: 232px; /* (Player height 152px + bottom 50px + buffer 30px) */
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
-/* This rule styles the headline */
-.edrea_hero .title {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 900;
-    font-size: 100px;
-    line-height: 1.1;
-	color: #fff;
-    text-shadow: 0px 0px 15px rgba(0,0,0,0.5);
-}
-
-/* This rule positions the Spotify player at the bottom on ALL screens */
-.spotify-container {
-    position: absolute;
-	bottom: 50px; /* New 50px value */
+/* This positions and styles the headline block */
+.hero_headline_wrap {
+	position: absolute;
+	z-index: 5;
+	bottom: 242px; /* (Spotify bottom 50px + Spotify height 152px + gap 40px) */
 	left: 50%;
 	transform: translateX(-50%);
 	width: 90%;
-    max-width: 720px; /* New wider value */
-	margin-top: 0;
+	max-width: 720px; /* This makes the container for the text wide */
 }
 
+/* This styles the headline text itself */
+.hero_headline_wrap .title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 110px;
+    line-height: 0.9;
+    color: #fff;
+	text-align: left; /* Aligns the text to the left within its container */
+}
 
-/* Responsive adjustments */
+/* This positions the Spotify player at the bottom */
+.hero_spotify_wrap {
+	position: absolute;
+	bottom: 50px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 90%;
+    max-width: 720px; /* Increased width */
+}
+
+/* === FINAL RESPONSIVE BREAKPOINTS === */
+
+/* For Laptops and Smaller Desktops */
+@media (max-width: 1440px) {
+	.hero_headline_wrap .title {
+        font-size: 90px;
+    }
+}
+
+/* For Tablets in Landscape */
 @media (max-width: 1040px) {
-    .edrea_hero .title {
-        font-size: 80px;
+    .hero_headline_wrap .title {
+        font-size: 70px;
     }
 }
 
+/* For Tablets in Portrait and Mobile Phones */
 @media (max-width: 768px) {
-    .edrea_hero .content_in {
-        /* Adjust padding to account for player's new position on mobile */
-        padding-bottom: 222px; 
+	.hero_headline_wrap {
+		width: 90%;
+		/* Re-center the whole block for a better mobile look */
+		left: 50%;
+		transform: translateX(-50%);
+		/* Adjust vertical position */
+		top: 45%;
+		bottom: auto;
+		transform: translateY(-50%);
+	}
+    .hero_headline_wrap .title {
+        font-size: 54px;
+        text-align: center; /* Center text on mobile */
     }
-    .edrea_hero .title {
-        font-size: 50px;
-    }
-	.spotify-container {
-		/* Keeps the same consistent positioning, just a bit closer to the bottom on mobile */
-		bottom: 30px; 
+	.hero_spotify_wrap {
+		bottom: 30px; /* Adjust spotify position for mobile */
 	}
 }
