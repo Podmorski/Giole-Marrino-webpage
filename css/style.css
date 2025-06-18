@@ -2337,8 +2337,8 @@ body.intro .loader_line:after {
 /* Position the headline block on the LEFT side for Desktops */
 .hero_headline_wrap {
 	position: absolute;
-	top: 50%;
-	left: 40px;
+	top: 60%;
+	left: 200px;
 	width: 45%;
 	transform: translateY(-50%);
 	z-index: 5;
@@ -2349,7 +2349,7 @@ body.intro .loader_line:after {
     font-family: 'Poppins', sans-serif;
     font-weight: 900;
     font-size: 110px;
-    line-height: 1.0;
+    line-height: 0.9;
     text-align: right;
 	color: #fff;
 }
