@@ -2461,8 +2461,8 @@ body.intro .loader_line:after {
     max-width: 650px; /* Adjust this value if you want the line break at a different point */
     margin-left: auto;
     margin-right: auto;
-}
-/* --- Fix for Modal Background Scrolling --- */
+
+/* --- Fix for Modal Background Scrolling (Forceful) --- */
 body.modal {
-    overflow: hidden;
+    overflow: hidden !important;
 }
