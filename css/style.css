@@ -2322,76 +2322,12 @@ body.intro .loader_line:after {
 	}
 }
 
-/*---------------------------------------------------*/
-/*	Final Hero Layout
-/*---------------------------------------------------*/
-
-/* The main content area no longer needs padding to avoid the player */
-.edrea_hero .content_in {
-    padding-bottom: 0;
-    text-align: left; /* Set alignment for the container */
-}
-
-/* This rule styles and positions the headline */
-.edrea_hero .title {
-    /* Positioning */
-    position: absolute;
-    bottom: 242px; /* Spotify bottom (50) + Spotify height (152) + Gap (40) */
-    left: 45%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 720px;
-    text-align: left; /* Align text to the left within its positioned box */
-
-    /* Font Styling */
-    font-family: 'Poppins', sans-serif;
-    font-weight: 900;
-    font-size: 140px;
-    line-height: 0.8;
-    color: #fff;
-    text-shadow: 0px 0px 15px rgba(0,0,0,0.5);
-
-    /* Remove default margins */
-    margin: 0;
-}
-
-/* This rule keeps the Spotify player centered at the bottom */
-.spotify-container {
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 720px;
-    margin-top: 0;
-}
-
-
-/* Responsive adjustments */
-@media (max-width: 1040px) {
-    .edrea_hero .title {
-        font-size: 100px; /* Scaled down from 110px */
-        left: 55%;
-    }
-}
-
-@media (max-width: 768px) {
-    .edrea_hero .title {
-        font-size: 70px; /* Scaled down for mobile */
-        bottom: 222px; /* Adjusts for player's new position: 30 + 152 + 40 */
-        left: 55%;
-    }
-    .spotify-container {
-        /* This rule from the original file ensures the player moves up slightly on mobile */
-        bottom: 30px;
-    }
-}
 /* --- Custom Styles --- */
 
 /* Social Icons Strip (Under Hero) */
 .edrea_social_icons {
     background-color: #000;
-    padding: 10px 0 10px 0; /* Pushes the bar down from the element above */
+    padding: 100px 0 80px 0; 
     text-align: center;
 }
 
@@ -2408,12 +2344,12 @@ body.intro .loader_line:after {
 
 .edrea_social_icons .footer-icons i {
     font-size: 28px;
-    color: #FFFFFF; /* Sets the icon color to white */
+    color: #FFFFFF;
     transition: color 0.3s ease;
 }
 
 .edrea_social_icons .footer-icons a:hover i {
-    color: #dd4242; /* Keeps the red hover effect */
+    color: #dd4242;
 }
 
 
@@ -2456,13 +2392,15 @@ body.intro .loader_line:after {
     line-height: 1.6;
     color: #FFFFFF;
 }
-/* --- Custom Style for Music Section Description --- */
+
+/* Custom Style for Music Section Description */
 .music-description {
-    max-width: 650px; /* Adjust this value if you want the line break at a different point */
+    max-width: 650px;
     margin-left: auto;
     margin-right: auto;
+}
 
-/* --- Fix for Modal Background Scrolling (Forceful) --- */
+/* Fix for Modal Background Scrolling (Forceful) */
 body.modal {
     overflow: hidden !important;
 }
