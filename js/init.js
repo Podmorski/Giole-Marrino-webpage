@@ -58,45 +58,43 @@
     },
 
     contactForm: function () {
-      $("#send_message").on("click", function () {
+      $("#send_message").on("click", function (e) {
+        e.preventDefault(); // Prevent default link behavior
+        
         var form = $(".edrea_contact_form");
         var name = $("#name").val();
         var email = $("#email").val();
         var message = $("#message").val();
         var spanSuccess = form.find(".success");
         var success = spanSuccess.data("success");
-        var emailto = form.data("email");
 
-        spanSuccess.empty(); //To empty previous error/success message.
-        //checking for blank fields
-        if (name === "" || email === "" || message === "" || emailto === "") {
-          $(".empty_notice").slideDown(500).delay(2000).slideUp(500);
-        } else {
-          // Returns successful data submission message when the entered information is stored in database.
-          $.post(
-            "modal/contact.php",
-            {
-              ajax_name: name,
-              ajax_email: email,
-              ajax_emailto: emailto,
-              ajax_message: message,
-            },
-            function (data) {
-              spanSuccess.append(data); //Append returned message to message paragraph
-              if (spanSuccess.find(".contact_error").length) {
-                spanSuccess.slideDown(500).delay(2000).slideUp(500);
-              } else {
-                spanSuccess.append(
-                  "<span class='contact_success'>" + success + "</span>"
-                );
-                spanSuccess.slideDown(500).delay(4000).slideUp(500);
-              }
-              if (data === "") {
-                form[0].reset(); //To reset form fields on success
-              }
-            }
-          );
+        spanSuccess.empty();
+
+        if (name === "" || email === "" || message === "") {
+          form.find(".empty_notice").slideDown(500).delay(2000).slideUp(500);
+          return;
         }
+        
+        var form_data = {
+            name: name,
+            email: email,
+            message: message,
+        };
+
+        $.ajax({
+          type: "POST",
+          url: "https://formspree.io/f/xzzgavpo",
+          data: form_data,
+          headers: {
+            'Accept': 'application/json'
+          }
+        }).done(function() {
+            spanSuccess.html("<span class='contact_success'>" + success + "</span>").slideDown(500).delay(4000).slideUp(500);
+            form[0].reset();
+        }).fail(function() {
+            spanSuccess.html("<span class='contact_error'>Oops! Something went wrong.</span>").slideDown(500).delay(4000).slideUp(500);
+        });
+        
         return false;
       });
     },
