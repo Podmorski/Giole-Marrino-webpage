@@ -1,0 +1,10 @@
+# Allow all search engines to crawl the site
+User-agent: *
+
+# Disallow crawling of asset and script folders
+Disallow: /css/
+Disallow: /js/
+Disallow: /modal/
+
+# Location of sitemap
+Sitemap: https://www.giolemarrino.com/sitemap.xml
