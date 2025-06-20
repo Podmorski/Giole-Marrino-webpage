@@ -1,6 +1,9 @@
 @charset "utf-8";
 
-
+/*
+/*	Copyright (c) 2022 ib-themes
+/*	Author: ib-themes
+/*	This file is made for CURRENT TEMPLATE
 
 
 /*--------------------------------f-------------------*/
@@ -839,11 +842,9 @@ body.dark .edrea_about {
 .edrea_title .title {
 	margin: 0;
 	padding: 0;
-        font-family: "Poppins";
 	font-size: 60px;
 	line-height: 1.25;
 	margin-bottom: 23px;
-        
 }
 .edrea_title .sub-title {
 	margin-bottom: 20px;
@@ -2460,8 +2461,47 @@ body.intro .loader_line:after {
     max-width: 650px; /* Adjust this value if you want the line break at a different point */
     margin-left: auto;
     margin-right: auto;
+}
 
 /* --- Fix for Modal Background Scrolling (Forceful) --- */
 body.modal {
     overflow: hidden !important;
+}
+
+/* --- Contact Form Button Style Fix --- */
+.edrea_contact_form .item button {
+	display: inline-block;
+	font-family: 'Poppins', sans-serif;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 30px;
+	letter-spacing: 0em;
+	text-align: center;
+	padding: 8px 40px;
+	text-decoration: none;
+	color: #0f172a;
+	border: 2px solid #7e7e7e;
+	border-radius: 40px;
+	overflow: hidden;
+	position: relative;
+	background-color: transparent;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.edrea_contact_form .item button:hover {
+	border-color: #dd4242;
+	background-color: #dd4242;
+	color: #fff;
+}
+
+body.dark .edrea_contact_form .item button {
+	color: #fff;
+	border-color: #A9AFC3;
+}
+
+body.dark .edrea_contact_form .item button:hover {
+	border-color: #dd4242;
+	background-color: #dd4242;
 }
