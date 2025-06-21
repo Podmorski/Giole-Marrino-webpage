@@ -2349,8 +2349,8 @@ body.intro .loader_line:after {
     /* Font Styling */
     font-family: 'Poppins', sans-serif;
     font-weight: 900;
-    font-size: 160px;
-    line-height: 0.8;
+    font-size: 150px;
+    line-height: 0.85;
     color: #fff;
     text-shadow: 0px 0px 15px rgba(0,0,0,0.5);
 
