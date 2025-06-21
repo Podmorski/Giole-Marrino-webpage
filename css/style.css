@@ -2538,3 +2538,7 @@ body.dark .edrea_contact_form .item a#send_message:hover {
 	border-color: #dd4242;
 	background-color: #dd4242;
 }
+/* Adds spacing below the 'Stream' button inside the modal */
+.edrea_modalbox .edrea_button {
+	margin-bottom: 30px;
+}
