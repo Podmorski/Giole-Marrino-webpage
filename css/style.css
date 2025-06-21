@@ -2338,13 +2338,15 @@ body.intro .loader_line:after {
 /* This rule styles and positions the headline */
 .edrea_hero .title {
     /* Positioning */
+   edrea_hero .title {
+    /* Positioning */
     position: absolute;
-    bottom: 240px; /* Spotify bottom (50) + Spotify height (152) + Gap (40) */
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 242px;
+    right: 45%; /* This was changed from 'left' */
+    transform: translateX(50%); /* This was changed from '-50%' */
     width: 90%;
     max-width: 720px;
-    text-align: right; /* Align text to the left within its positioned box */
+    text-align: right; /* This was changed from 'left' */
 
     /* Font Styling */
     font-family: 'Poppins', sans-serif;
