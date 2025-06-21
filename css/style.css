@@ -2340,7 +2340,7 @@ body.intro .loader_line:after {
     /* Positioning */
     position: absolute;
     bottom: 240px; /* Spotify bottom (50) + Spotify height (152) + Gap (40) */
-    right: 50%;
+    left: 50%;
     transform: translateX(-50%);
     width: 90%;
     max-width: 720px;
