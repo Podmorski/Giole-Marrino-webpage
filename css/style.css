@@ -2542,3 +2542,190 @@ body.dark .edrea_contact_form .item a#send_message:hover {
 .edrea_modalbox .edrea_button {
 	margin-bottom: 30px;
 }
+/*---------------------------------------------------*/
+/* 10. DONATION SECTION
+/*---------------------------------------------------*/
+
+.edrea_donation_section {
+    width: 100%;
+    float: left;
+    padding: 120px 0;
+}
+
+.donation_content {
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+.donation_card {
+    width: 100%;
+    background-color: rgba(25, 28, 38, 0.9);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.card_header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.card_header .icon_container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(to bottom right, rgba(221, 66, 67, 0.2), rgba(221, 66, 67, 0.3));
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 1px solid rgba(221, 66, 67, 0.3);
+}
+
+.card_header .icon_container i {
+    font-size: 32px;
+    color: #dd4243;
+}
+
+.card_header .title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.card_header .subtitle {
+    font-size: 14px;
+    color: #a9afc3;
+}
+
+.card_body .label {
+    display: block;
+    color: #eee;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.amount_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.amount_button {
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    background-color: rgba(16, 19, 24, 0.8);
+    color: #eee;
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    cursor: pointer;
+}
+
+.amount_button:hover {
+    background-color: #101318;
+    transform: scale(1.05);
+}
+
+.amount_button.active {
+    background-color: #dd4243;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(221, 66, 67, 0.25);
+    border-color: #dd4243;
+}
+
+.custom_amount_wrapper {
+    position: relative;
+}
+
+.custom_amount_wrapper .dollar_sign {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #a9afc3;
+}
+
+.custom_amount_input {
+    width: 100%;
+    padding: 12px 12px 12px 28px;
+    background-color: rgba(16, 19, 24, 0.6);
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    border-radius: 12px;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.custom_amount_input:focus {
+    border-color: rgba(221, 66, 67, 0.6);
+    box-shadow: 0 0 0 3px rgba(221, 66, 67, 0.15);
+}
+
+.card_footer {
+    margin-top: 25px;
+}
+
+.donate_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #dd4243;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(221, 66, 67, 0.25);
+}
+
+.donate_button:hover {
+    background-color: #c23839;
+    transform: scale(1.02);
+    box-shadow: 0 6px 25px rgba(221, 66, 67, 0.4);
+}
+
+.donate_button.disabled {
+    background-color: rgba(16, 19, 24, 0.8);
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    color: #a9afc3;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+.donate_button.disabled:hover {
+    transform: none;
+    background-color: rgba(16, 19, 24, 0.8);
+}
+
+
+.donate_button .button_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.donate_button .button_content i{
+    font-size: 20px;
+}
+
+.security_notice {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.security_notice p {
+    font-size: 12px;
+    color: #777;
+    margin: 0;
+}
