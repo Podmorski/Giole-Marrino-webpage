@@ -423,14 +423,12 @@ h6 {
 }
 .edrea_modalbox h3 {
 	font-family: "Poppins";
-	color: #3a00ff;
 	font-size: 23px;
 	font-weight: 700;
 	margin-bottom: 30px;
 }
 .edrea_modalbox p {
 	margin-bottom: 30px;
-	/*	text-align: justify;*/
 }
 .edrea_modalbox .in_list {
 	width: 100%;
@@ -844,7 +842,7 @@ body.dark .edrea_about {
 .edrea_title .title {
 	margin: 0;
 	padding: 0;
-        font-family: "Poppins";
+    font-family: "Poppins";
 	font-size: 60px;
 	line-height: 1.25;
 	margin-bottom: 23px;
@@ -1102,7 +1100,7 @@ body.dark .edrea_about {
 	padding: 60px 0;
 }
 .edrea_portfolio .edrea_title {
-	margin-bottom: 60px;
+	margin-bottom: 40px;
 }
 .edrea_portfolio_slider .item {
 	cursor: pointer;
@@ -1433,14 +1431,21 @@ body.dark .edrea_about {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
 }
 .edrea_contact .contact_left li {
 	margin: 0;
 	padding: 0;
 	width: 100%;
-	margin-bottom: 33px;
+	margin-bottom: 50px;
 	display: flex;
 	align-items: flex-start;
+}
+.edrea_contact .contact_left li:last-child{
+	margin-bottom: 0;
 }
 .edrea_contact .contact_left li .icon {
 	margin-right: 15px;
@@ -2392,7 +2397,7 @@ body.intro .loader_line:after {
 
 @media (max-width: 768px) {
     .edrea_hero .title {
-        font-size: 80px;     /* Increased the font size */
+        font-size: 80px;     /* Increased font size */
         bottom: 222px;
         text-align: right;   /* Ensures text is right-aligned */
         right: 20px;         /* Creates a 20px offset from the right edge */
@@ -2400,8 +2405,14 @@ body.intro .loader_line:after {
         transform: none;     /* Resets the desktop 'transform' property */
         width: auto;         /* Allows the title to have a natural width */
     }
+    
+    .edrea_hero .overlay_image {
+        /* More precise positioning for mobile */
+        background-position: 30% 50%; 
+    }
+    
     .spotify-container {
-        bottom: 50px;
+        bottom: 30px;
     }
 }
 /* --- Custom Styles --- */
@@ -2526,11 +2537,4 @@ body.dark .edrea_contact_form .item button:hover,
 body.dark .edrea_contact_form .item a#send_message:hover {
 	border-color: #dd4242;
 	background-color: #dd4242;
-}
-/* Responsive fix for hero image on MOBILE screens */
-@media (max-width: 768px) {
-    .edrea_hero .overlay_image {
-        /* This pulls the background image to the left on narrow screens */
-        background-position: 30% 50%; 
-    }
 }
