@@ -2344,7 +2344,7 @@ body.intro .loader_line:after {
     transform: translateX(50%); /* This was changed from '-50%' */
     width: 90%;
     max-width: 720px;
-    text-align: left; /* This was changed from 'left' */
+    text-align: right; /* This was changed from 'left' */
 
     /* Font Styling */
     font-family: 'Poppins', sans-serif;
