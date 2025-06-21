@@ -2339,12 +2339,12 @@ body.intro .loader_line:after {
 .edrea_hero .title {
     /* Positioning */
     position: absolute;
-    bottom: 242px; /* Spotify bottom (50) + Spotify height (152) + Gap (40) */
-    left: 45%;
+    bottom: 240px; /* Spotify bottom (50) + Spotify height (152) + Gap (40) */
+    right: 50%;
     transform: translateX(-50%);
     width: 90%;
     max-width: 720px;
-    text-align: left; /* Align text to the left within its positioned box */
+    text-align: right; /* Align text to the left within its positioned box */
 
     /* Font Styling */
     font-family: 'Poppins', sans-serif;
