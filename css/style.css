@@ -2522,3 +2522,9 @@ body.dark .edrea_contact_form .item a#send_message:hover {
 	border-color: #dd4242;
 	background-color: #dd4242;
 }
+/* Responsive fix for hero image on MOBILE screens */
+@media (max-width: 768px) {
+    .edrea_hero .overlay_image {
+        background-position: left center; /* Aligns to the left edge to show the subject */
+    }
+}
