@@ -13,6 +13,7 @@
       this.mobileMenu();
       this.hashtag();
       this.contactForm();
+      this.donation_fx(); // Call the new donation function
       this.owl();
       this.masonry();
       this.counter();
@@ -97,6 +98,53 @@
         
         return false;
       });
+    },
+
+    donation_fx: function(){
+        var self = this;
+        var section = $('.edrea_donation_section');
+        if(section.length){
+            var paypal_user = 'kuksaudio'; // IMPORTANT: Replace with your client's PayPal.me username
+            var amount_buttons = section.find('.amount_button');
+            var custom_amount_input = section.find('#custom_amount');
+            var donate_button = section.find('#donate_button');
+            var donate_button_text = section.find('#donate_button_text');
+            var selectedAmount = 0;
+
+            var update_donate_link = function(){
+                if(selectedAmount > 0){
+                    var url = 'https://paypal.me/' + paypal_user + '/' + selectedAmount;
+                    donate_button.attr('href', url).removeClass('disabled');
+                    donate_button_text.text('Donate $' + selectedAmount + ' via PayPal');
+                } else {
+                    donate_button.attr('href', '#').addClass('disabled');
+                    donate_button_text.text('Donate via PayPal');
+                }
+            };
+
+            amount_buttons.off().on('click', function(e){
+                e.preventDefault();
+                var el = $(this);
+                selectedAmount = parseInt(el.data('amount'));
+                amount_buttons.removeClass('active');
+                el.addClass('active');
+                custom_amount_input.val('');
+                update_donate_link();
+            });
+
+            custom_amount_input.on('input', function(){
+                var el = $(this);
+                var value = parseFloat(el.val());
+                amount_buttons.removeClass('active');
+                if(value > 0 && !isNaN(value)){
+                    selectedAmount = value;
+                } else {
+                    selectedAmount = 0;
+                }
+                update_donate_link();
+            });
+            update_donate_link(); // Initialize
+        }
     },
 
     owl: function () {
