@@ -2392,11 +2392,16 @@ body.intro .loader_line:after {
 
 @media (max-width: 768px) {
     .edrea_hero .title {
-        font-size: 70px; 
+        font-size: 80px;     /* Increased the font size */
         bottom: 222px;
+        text-align: right;   /* Ensures text is right-aligned */
+        right: 20px;         /* Creates a 20px offset from the right edge */
+        left: auto;          /* Resets the desktop 'left' property */
+        transform: none;     /* Resets the desktop 'transform' property */
+        width: auto;         /* Allows the title to have a natural width */
     }
     .spotify-container {
-        bottom: 30px;
+        bottom: 50px;
     }
 }
 /* --- Custom Styles --- */
