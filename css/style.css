@@ -2338,8 +2338,6 @@ body.intro .loader_line:after {
 /* This rule styles and positions the headline */
 .edrea_hero .title {
     /* Positioning */
-   edrea_hero .title {
-    /* Positioning */
     position: absolute;
     bottom: 242px;
     right: 45%; /* This was changed from 'left' */
@@ -2376,7 +2374,7 @@ body.intro .loader_line:after {
 @media (max-width: 1040px) {
     .edrea_hero .title {
         font-size: 100px; /* Scaled down from 110px */
-        left: 55%;
+        /* Note: 'left' property is removed to favor the new 'right' positioning */
     }
 }
 
@@ -2384,7 +2382,7 @@ body.intro .loader_line:after {
     .edrea_hero .title {
         font-size: 70px; /* Scaled down for mobile */
         bottom: 222px; /* Adjusts for player's new position: 30 + 152 + 40 */
-        left: 55%;
+         /* Note: 'left' property is removed to favor the new 'right' positioning */
     }
     .spotify-container {
         /* This rule from the original file ensures the player moves up slightly on mobile */
