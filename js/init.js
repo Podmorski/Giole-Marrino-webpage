@@ -441,11 +441,7 @@
   $(document).ready(function () {
     // initialization
     EdreaObject.init();
-	
-    // This is the corrected line
-    $(window).on('load', function () {
-      EdreaObject.run_preloader();
-    });
+    EdreaObject.run_preloader(); // Run preloader as soon as the document is ready
   });
 
 })(jQuery);
