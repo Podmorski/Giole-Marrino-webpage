@@ -2525,6 +2525,7 @@ body.dark .edrea_contact_form .item a#send_message:hover {
 /* Responsive fix for hero image on MOBILE screens */
 @media (max-width: 768px) {
     .edrea_hero .overlay_image {
-        background-position: left center; /* Aligns to the left edge to show the subject */
+        /* This pulls the background image to the left on narrow screens */
+        background-position: 30% 50%; 
     }
 }
