@@ -2545,17 +2545,20 @@ body.dark .edrea_contact_form .item a#send_message:hover {
 /*---------------------------------------------------*/
 /* 10. DONATION SECTION - FINAL STYLES
 /*---------------------------------------------------*/
-
 .edrea_donation_section {
     width: 100%;
     float: left;
     padding: 60px 0; 
 }
 
-/* This aligns the title to the left, matching other sections */
+/* Remove the text-align: left and margin-bottom from this rule */
 .edrea_donation_section .edrea_title {
+    /* Remove these lines:
     text-align: left; 
     margin-bottom: 60px; 
+    */
+    max-width: 670px;  /* Add this to match contact section */
+    margin-bottom: 60px;  /* Keep the margin-bottom but remove text-align */
 }
 
 /* This centers the donation card on the page */
@@ -2573,6 +2576,7 @@ body.dark .edrea_contact_form .item a#send_message:hover {
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
+/* Rest of your donation styles remain the same */
 .card_body .label {
     display: block;
     color: #eee;
@@ -2679,11 +2683,11 @@ body.dark .edrea_contact_form .item a#send_message:hover {
     cursor: not-allowed;
     box-shadow: none;
 }
+
 .donate_button.disabled:hover {
     transform: none;
     background-color: rgba(30, 33, 44, 0.8);
 }
-
 
 .donate_button .button_content {
     display: flex;
@@ -2691,6 +2695,7 @@ body.dark .edrea_contact_form .item a#send_message:hover {
     justify-content: center;
     gap: 10px;
 }
+
 .donate_button .button_content i{
     font-size: 22px;
 }
