@@ -2543,30 +2543,23 @@ body.dark .edrea_contact_form .item a#send_message:hover {
 	margin-bottom: 30px;
 }
 /* ===================================================================
- * 20. Donation Section (Definitive Fix)
+ * 20. Donation Section (Based on User's new HTML structure)
  * ================================================================== */
 
-/* --- Alignment & Spacing Fix --- */
 #donation {
-    padding: 100px 0 60px 0;
+    /* Sets the background and vertical spacing */
+    background-color: #000;
+    padding: 70px 0;
 }
 
-#donation .edrea_title {
-    /* This overrides the theme's 'max-width: 670px' to allow proper alignment */
-    max-width: 1290px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#donation .edrea_title .description{
-	max-width: 650px;
+#donation .edrea_title .description {
+    /* Styles the new paragraph to match other sections */
+    max-width: 650px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 30px;
+    color: #7e7e7e;
 }
 
-
-/* --- Card and Button Styling --- */
 #donation .donation_card {
     max-width: 600px;
     margin: 0 auto;
@@ -2585,9 +2578,8 @@ body.dark .edrea_contact_form .item a#send_message:hover {
 }
 
 #donation .amount_grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     gap: 15px;
     margin-bottom: 25px;
 }
@@ -2603,8 +2595,6 @@ body.dark .edrea_contact_form .item a#send_message:hover {
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
-    flex-grow: 1;
-    flex-basis: 80px;
 }
 
 #donation .amount_button:hover,
@@ -2639,10 +2629,6 @@ body.dark .edrea_contact_form .item a#send_message:hover {
     padding: 12px 15px 12px 10px;
 }
 
-#donation .custom_amount_input:focus {
-    outline: none;
-}
-
 #donation .donate_button {
     display: inline-block;
     width: 100%;
@@ -2661,34 +2647,17 @@ body.dark .edrea_contact_form .item a#send_message:hover {
     background-color: #127ab0;
 }
 
-#donation .donate_button .button_content i {
-    margin-right: 10px;
-}
-
 #donation .security_notice {
     font-size: 0.8rem;
     color: #888;
     margin-top: 20px;
 }
 
-
 /* --- Responsive Fixes --- */
-@media screen and (max-width: 1040px) {
-    #donation {
-        padding: 70px 0;
-    }
-    #donation .edrea_title {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-}
-
 @media screen and (max-width: 480px) {
     #donation .amount_grid {
-       /* This more rigid grid layout fixes the mobile button alignment */
-       display: grid;
+       /* Fixes the mobile button alignment */
        grid-template-columns: 1fr 1fr;
-       gap: 10px;
     }
     #donation .donation_card {
         padding: 25px 15px;
