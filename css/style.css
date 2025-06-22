@@ -2669,3 +2669,16 @@ body.dark .edrea_contact_form .item a#send_message:hover {
         padding: 25px 15px;
     }
 }
+/* Final Donation Box Spacing & Centering Fix */
+
+/* 1. This pushes the donation card down from the text above it. */
+#donation .donation_card {
+	margin-top: 60px;
+}
+
+/* 2. This forces the items inside the card to be properly centered. */
+#donation .card_body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
