@@ -2662,3 +2662,8 @@ body.dark .edrea_contact_form .item a#send_message:hover {
         margin-top: 60px; /* Slightly less space on mobile */
     }
 }
+#donation .card_footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
