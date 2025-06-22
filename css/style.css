@@ -2557,7 +2557,7 @@ body.dark .edrea_contact_form .item a#send_message:hover {
     text-align: left; 
     margin-bottom: 60px; 
     */
-    margin-left: 40px;
+    margin-left: 100px;
     max-width: 670px;  /* Add this to match contact section */
     margin-bottom: 60px;  /* Keep the margin-bottom but remove text-align */
 }
