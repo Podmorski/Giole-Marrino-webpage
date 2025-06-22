@@ -2555,9 +2555,12 @@ body.dark .edrea_contact_form .item a#send_message:hover {
 	margin-right: auto;
     color: #7e7e7e;
 }
+#donation .donation_content {
+    padding-top: 80px !important; /* Increased from 40px to 80px */
+}
 #donation .donation_card {
     max-width: 600px;
-    margin: 80px auto 0 auto; /* This adds space above the card */
+    margin: 0 auto; /* Back to original centering */
     background-color: #111;
     border: 1px solid #222;
     border-radius: 8px;
