@@ -2543,25 +2543,30 @@ body.dark .edrea_contact_form .item a#send_message:hover {
 	margin-bottom: 30px;
 }
 /* ===================================================================
- * 20. Donation Section (Final Corrected Version)
+ * 20. Donation Section (Definitive Fix)
  * ================================================================== */
 
-/* --- Alignment Fix (for Desktop) --- */
+/* --- Alignment & Spacing Fix --- */
+#donation {
+    padding: 100px 0 60px 0;
+}
+
 #donation .edrea_title {
-    max-width: 1200px;
-    padding-left: 40px;
-    padding-right: 40px;
+    /* This overrides the theme's 'max-width: 670px' to allow proper alignment */
+    max-width: 1290px;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* --- Section Styling --- */
-#donation {
-    /* This sets the top padding to 100px and the bottom padding to 60px, reducing the space below. */
-    padding: 100px 0 60px 0;
+#donation .edrea_title .description{
+	max-width: 650px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
 }
 
-/* --- Theme Styling for the Donation Card --- */
+
+/* --- Card and Button Styling --- */
 #donation .donation_card {
     max-width: 600px;
     margin: 0 auto;
@@ -2667,32 +2672,23 @@ body.dark .edrea_contact_form .item a#send_message:hover {
 }
 
 
-/* --- Responsive Styles --- */
-
-/* This rule makes the padding consistent with other sections on smaller viewports */
+/* --- Responsive Fixes --- */
 @media screen and (max-width: 1040px) {
     #donation {
         padding: 70px 0;
     }
-}
-
-@media screen and (max-width: 768px) {
     #donation .edrea_title {
-        padding-left: 25px;
-        padding-right: 25px;
-    }
-    #donation .donation_card {
-        padding: 30px 25px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
 @media screen and (max-width: 480px) {
     #donation .amount_grid {
-        gap: 10px;
-    }
-    #donation .amount_button {
-        flex-basis: calc(50% - 5px);
-        flex-grow: 0;
+       /* This more rigid grid layout fixes the mobile button alignment */
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       gap: 10px;
     }
     #donation .donation_card {
         padding: 25px 15px;
