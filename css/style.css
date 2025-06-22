@@ -2716,3 +2716,163 @@ body.dark .edrea_contact_form .item a#send_message:hover {
         padding: 20px;
     }
 }
+/* ===================================================================
+ * 20. Support Section
+ *
+ * ------------------------------------------------------------------ */
+
+#support {
+    padding: 100px 0;
+    background-color: #000; /* Assuming black background */
+}
+
+.donation-box {
+    max-width: 600px;
+    margin: 30px auto 0 auto; /* Adds space below the title and centers the box */
+    background-color: #111;
+    border: 1px solid #222;
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+}
+
+.donation-prompt {
+    color: #eee;
+    font-size: 1rem;
+    margin-bottom: 25px;
+}
+
+.amount-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.amount-btn {
+    background-color: #222;
+    border: 1px solid #333;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-grow: 1; /* Allows buttons to grow */
+    min-width: 80px; /* Prevents buttons from becoming too small */
+}
+
+.amount-btn:hover {
+    background-color: #e84545;
+    border-color: #e84545;
+}
+
+.amount-btn.active {
+    background-color: #e84545;
+    border-color: #e84545;
+    color: #fff;
+}
+
+.custom-amount {
+    display: flex;
+    align-items: center;
+    max-width: 300px;
+    margin: 0 auto 25px auto;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #222;
+}
+
+.custom-amount span {
+    padding: 12px 15px;
+    color: #888;
+    font-size: 1rem;
+}
+
+.custom-amount input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    padding: 12px 15px 12px 0;
+}
+
+.custom-amount input:focus {
+    outline: none;
+}
+
+.paypal-btn {
+    display: inline-block;
+    width: 100%;
+    max-width: 300px;
+    padding: 15px 20px;
+    background-color: #1693d2; /* PayPal Blue */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.paypal-btn:hover {
+    background-color: #127ab0;
+}
+
+.paypal-btn i {
+    margin-right: 10px;
+}
+
+.secure-payment-info {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.secure-payment-info i {
+    margin-right: 5px;
+}
+
+
+/* ------------------------------------------------------------------ 
+ * responsive styles
+ * ------------------------------------------------------------------ */
+
+@media screen and (max-width: 768px) {
+    #support {
+        padding: 80px 0;
+    }
+
+    .donation-box {
+        padding: 30px 25px;
+    }
+
+    .amount-options {
+        gap: 10px;
+    }
+    
+    /* Make buttons take up ~50% width to form two columns */
+    .amount-btn {
+        flex-basis: calc(50% - 10px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #support {
+        padding: 60px 0;
+    }
+
+    .donation-box {
+        padding: 25px 15px;
+    }
+    
+    /* Make buttons take up ~33% width to form three columns */
+    .amount-btn {
+        flex-basis: calc(33.333% - 10px);
+        padding: 10px;
+    }
+}
