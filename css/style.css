@@ -2552,7 +2552,7 @@ body.dark .edrea_contact_form .item a#send_message:hover {
     padding: 60px 0;
 }
 
-/* This ensures the title block aligns to the left, like other sections */
+/* This aligns the title to the left, matching other sections */
 .edrea_donation_section .edrea_title {
     text-align: left; 
     margin-bottom: 60px;
@@ -2582,6 +2582,7 @@ body.dark .edrea_contact_form .item a#send_message:hover {
     text-align: center;
 }
 
+/* This rule now centers the donation buttons */
 .amount_grid {
     display: flex;
     flex-wrap: wrap;
@@ -2600,8 +2601,7 @@ body.dark .edrea_contact_form .item a#send_message:hover {
     color: #eee;
     border: 1px solid rgba(128, 128, 128, 0.2);
     cursor: pointer;
-    flex-grow: 1; /* Allows buttons to share space */
-    min-width: 80px; /* Ensures buttons don't get too small */
+    flex-basis: 90px; /* Gives a consistent base width to buttons */
 }
 
 .amount_button:hover {
