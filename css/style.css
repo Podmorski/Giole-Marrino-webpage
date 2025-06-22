@@ -2543,7 +2543,7 @@ body.dark .edrea_contact_form .item a#send_message:hover {
 	margin-bottom: 30px;
 }
 /*---------------------------------------------------*/
-/* 10. DONATION SECTION
+/* 10. DONATION SECTION - FINAL STYLES
 /*---------------------------------------------------*/
 
 .edrea_donation_section {
@@ -2552,13 +2552,13 @@ body.dark .edrea_contact_form .item a#send_message:hover {
     padding: 60px 0; 
 }
 
-/* Align title to the left, matching other sections */
+/* This aligns the title to the left, matching other sections */
 .edrea_donation_section .edrea_title {
     text-align: left; 
     margin-bottom: 60px; 
 }
 
-/* Center the donation card on the page */
+/* This centers the donation card on the page */
 .donation_content {
     max-width: 720px; 
     margin: 0 auto;   
