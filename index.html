@@ -396,43 +396,43 @@ This fusion comes to life in his debut album Someplace, released in April 2025. 
     </div>
 
 </section>
-<section id="support">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-title">
-                    <h4>Support</h4>
-                    <h2>Support Me</h2>
-                </div>
-            </div>
+<section id="donation">
+    <div class="edrea_donation_section">
+        <!-- Title section outside container for full width -->
+        <div class="edrea_title">
+            <p class="sub_text"><span>Support</span></p>
+            <h2 class="title">Support <span>Me</span></h2>
         </div>
 
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="donation-box">
-                    <p class="donation-prompt">Choose a one-time donation amount</p>
-                    
-                    <div class="amount-options">
-                        <button class="amount-btn">$10</button>
-                        <button class="amount-btn active">$25</button> <button class="amount-btn">$50</button>
-                        <button class="amount-btn">$75</button>
-                        <button class="amount-btn">$100</button>
+        <!-- Donation content in container for centering -->
+        <div class="container">
+            <div class="donation_content">
+                <div class="donation_card">
+                    <div class="card_body">
+                        <label class="label">Choose a one-time donation amount</label>
+                        <div class="amount_grid">
+                            <button class="amount_button" data-amount="10">$10</button>
+                            <button class="amount_button" data-amount="25">$25</button>
+                            <button class="amount_button" data-amount="50">$50</button>
+                            <button class="amount_button" data-amount="75">$75</button>
+                            <button class="amount_button" data-amount="100">$100</button>
+                        </div>
+                        <div class="custom_amount_wrapper">
+                            <span class="dollar_sign">$</span>
+                            <input type="number" id="custom_amount" placeholder="Custom amount" class="custom_amount_input" min="1">
+                        </div>
                     </div>
-
-                    <div class="custom-amount">
-                        <span>$</span>
-                        <input type="text" placeholder="Custom amount">
+                    <div class="card_footer">
+                        <a href="#" id="donate_button" class="donate_button disabled" target="_blank" rel="noopener noreferrer">
+                            <div class="button_content">
+                                <i class="fab fa-paypal"></i>
+                                <span id="donate_button_text">Donate via PayPal</span>
+                            </div>
+                        </a>
+                         <div class="security_notice">
+                            <p>🔒 Secure payment powered by PayPal</p>
+                        </div>
                     </div>
-
-                    <button class="paypal-btn">
-                        <i class="fa-brands fa-paypal"></i>
-                        Donate via PayPal
-                    </button>
-
-                    <p class="secure-payment-info">
-                        <i class="fa-solid fa-lock"></i>
-                        Secure payment powered by PayPal
-                    </p>
                 </div>
             </div>
         </div>
