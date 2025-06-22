@@ -2345,11 +2345,11 @@ body.intro .loader_line:after {
     /* Positioning */
     position: absolute;
     bottom: 242px;
-    right: 45%;                 /* This creates the slightly off-center position on the right */
-    transform: translateX(50%); 
+    right: 45%;              /* This creates the slightly off-center position on the right */
+    transform: translateX(50%);
     width: 90%;
     max-width: 720px;
-    text-align: right;           /* This aligns the text to the right */
+    text-align: right;          /* This aligns the text to the right */
 
     /* Font Styling */
     font-family: 'Poppins', sans-serif;
@@ -2397,13 +2397,13 @@ body.intro .loader_line:after {
 
 @media (max-width: 768px) {
     .edrea_hero .title {
-        font-size: 80px;     /* Increased font size */
+        font-size: 80px;      /* Increased font size */
         bottom: 222px;
         text-align: right;   /* Ensures text is right-aligned */
-        right: 20px;         /* Creates a 20px offset from the right edge */
-        left: auto;          /* Resets the desktop 'left' property */
-        transform: none;     /* Resets the desktop 'transform' property */
-        width: auto;         /* Allows the title to have a natural width */
+        right: 20px;          /* Creates a 20px offset from the right edge */
+        left: auto;           /* Resets the desktop 'left' property */
+        transform: none;      /* Resets the desktop 'transform' property */
+        width: auto;          /* Allows the title to have a natural width */
     }
     
     .edrea_hero .overlay_image {
@@ -2555,9 +2555,13 @@ body.dark .edrea_contact_form .item a#send_message:hover {
 	margin-right: auto;
     color: #7e7e7e;
 }
+
+/* FIX: ADDED clear: both; TO PREVENT OVERLAP WITH FLOATED ELEMENTS */
 #donation .donation_content {
     padding-top: 80px !important; /* Increased from 40px to 80px */
+    clear: both;
 }
+
 #donation .donation_card {
     max-width: 720px;
     margin: 0 auto; /* Back to original centering */
@@ -2568,6 +2572,14 @@ body.dark .edrea_contact_form .item a#send_message:hover {
 }
 /* --- FIX FOR INTERNAL CARD LAYOUT --- */
 #donation .card_body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#donation .card_footer {
+    margin-top: 30px;
+    width: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -2656,13 +2668,16 @@ body.dark .edrea_contact_form .item a#send_message:hover {
 @media screen and (max-width: 480px) {
     #donation .amount_grid {
        grid-template-columns: 1fr 1fr;
-  
-#donation .donation_card {
-    margin-top: 40px;
-}
+    } /* <-- FIX: ADDED MISSING CLOSING BRACE */
 
-#donation .card_footer {
-    margin-top: 30px;
-    width: 100%;
-    text-align: center;
+    #donation .donation_card {
+        margin-top: 40px;
+        padding: 40px 20px; /* Adjusted padding for smaller screens */
+    }
+
+    #donation .card_footer {
+        margin-top: 30px;
+        width: 100%;
+        text-align: center;
+    }
 }
