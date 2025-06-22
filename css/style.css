@@ -2543,22 +2543,25 @@ body.dark .edrea_contact_form .item a#send_message:hover {
 	margin-bottom: 30px;
 }
 /* ===================================================================
- * 20. Donation Section (Complete Rule with Alignment Fix)
+ * 20. Donation Section (Final Corrected Version)
  * ================================================================== */
 
-/* --- Alignment Fix --- */
-/* This forces the title into the same content column as the other sections */
+/* --- Alignment Fix (for Desktop) --- */
 #donation .edrea_title {
     max-width: 1200px;
     padding-left: 40px;
     padding-right: 40px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 30px; /* Adds some space between title and donation box */
 }
 
-/* --- Original Theme Styling --- */
-/* Styles for the main donation card, based on your site's theme */
+/* --- Section Styling --- */
+#donation {
+    /* This sets the top padding to 100px and the bottom padding to 60px, reducing the space below. */
+    padding: 100px 0 60px 0;
+}
+
+/* --- Theme Styling for the Donation Card --- */
 #donation .donation_card {
     max-width: 600px;
     margin: 0 auto;
@@ -2577,8 +2580,9 @@ body.dark .edrea_contact_form .item a#send_message:hover {
 }
 
 #donation .amount_grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 15px;
     margin-bottom: 25px;
 }
@@ -2589,16 +2593,18 @@ body.dark .edrea_contact_form .item a#send_message:hover {
     color: #fff;
     padding: 12px 10px;
     font-size: 1rem;
-    font-family: 'Poppins', sans-serif; /* Uses a font from your theme */
+    font-family: 'Poppins', sans-serif;
     font-weight: 500;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
+    flex-grow: 1;
+    flex-basis: 80px;
 }
 
 #donation .amount_button:hover,
-#donation .amount_button.active { /* Allows for an 'active' class via JS if needed */
-    background-color: #e84545; /* Red accent from your theme */
+#donation .amount_button.active {
+    background-color: #e84545;
     border-color: #e84545;
 }
 
@@ -2624,7 +2630,7 @@ body.dark .edrea_contact_form .item a#send_message:hover {
     border: none;
     color: #fff;
     font-size: 1rem;
-    font-family: 'Poppins', sans-serif; /* Uses a font from your theme */
+    font-family: 'Poppins', sans-serif;
     padding: 12px 15px 12px 10px;
 }
 
@@ -2637,7 +2643,7 @@ body.dark .edrea_contact_form .item a#send_message:hover {
     width: 100%;
     max-width: 300px;
     padding: 15px 20px;
-    background-color: #1693d2; /* PayPal Blue */
+    background-color: #1693d2;
     color: #fff;
     border-radius: 5px;
     font-size: 1.1rem;
@@ -2660,7 +2666,16 @@ body.dark .edrea_contact_form .item a#send_message:hover {
     margin-top: 20px;
 }
 
+
 /* --- Responsive Styles --- */
+
+/* This rule makes the padding consistent with other sections on smaller viewports */
+@media screen and (max-width: 1040px) {
+    #donation {
+        padding: 70px 0;
+    }
+}
+
 @media screen and (max-width: 768px) {
     #donation .edrea_title {
         padding-left: 25px;
@@ -2673,7 +2688,11 @@ body.dark .edrea_contact_form .item a#send_message:hover {
 
 @media screen and (max-width: 480px) {
     #donation .amount_grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 buttons per row on small mobile */
+        gap: 10px;
+    }
+    #donation .amount_button {
+        flex-basis: calc(50% - 5px);
+        flex-grow: 0;
     }
     #donation .donation_card {
         padding: 25px 15px;
