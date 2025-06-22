@@ -2553,13 +2553,13 @@ body.dark .edrea_contact_form .item a#send_message:hover {
 }
 
 .edrea_donation_section .edrea_title {
-    margin-bottom: 60px; /* Adds correct spacing between title and card */
-    text-align: center; /* Centers the title block */
+    text-align: center; /* This centers the title block */
+    margin-bottom: 60px; /* This adds space between the title and the card */
 }
 
 .donation_content {
-    max-width: 720px;
-    margin: 0 auto;
+    max-width: 720px; /* This sets the width of the donation card container */
+    margin: 0 auto;   /* This centers the card on the page */
 }
 
 .donation_card {
@@ -2582,7 +2582,8 @@ body.dark .edrea_contact_form .item a#send_message:hover {
 
 .amount_grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    /* This creates a responsive grid that wraps automatically on smaller screens */
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
     gap: 10px;
     margin-bottom: 20px;
 }
@@ -2614,7 +2615,7 @@ body.dark .edrea_contact_form .item a#send_message:hover {
 .custom_amount_wrapper {
     position: relative;
     max-width: 250px;
-    margin: 0 auto;
+    margin: 20px auto 0;
 }
 
 .custom_amount_wrapper .dollar_sign {
