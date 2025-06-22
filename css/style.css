@@ -2656,14 +2656,13 @@ body.dark .edrea_contact_form .item a#send_message:hover {
 @media screen and (max-width: 480px) {
     #donation .amount_grid {
        grid-template-columns: 1fr 1fr;
-    }
-    #donation .donation_card {
-        padding: 25px 15px;
-        margin-top: 60px; /* Slightly less space on mobile */
-    }
+  
+#donation .donation_card {
+    margin-top: 40px;
 }
+
 #donation .card_footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
 }
