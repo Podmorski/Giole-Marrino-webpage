@@ -11,9 +11,10 @@
     init: function () {
       this.anchor();
       this.mobileMenu();
+      this.headlineAnimation(); // <<< THIS LINE IS ADDED
       this.hashtag();
       this.contactForm();
-      this.donation_fx(); // Call the new donation function
+      this.donation_fx();
       this.owl();
       this.masonry();
       this.counter();
@@ -22,6 +23,13 @@
       this.popup();
       this.svg();
       this.bg_images();
+    },
+
+    // THIS ENTIRE FUNCTION IS NEW
+    headlineAnimation: function(){
+        setTimeout(function(){
+            $('.edrea_hero .title').removeClass('hidden-for-anim').addClass('animated fadeInRight');
+        }, 2200); // This delay waits for the preloader to finish
     },
 
     anchor: function () {
