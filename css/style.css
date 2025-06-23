@@ -651,6 +651,7 @@ h6 {
 /* Hero Header */
 .edrea_hero {
 	position: relative;
+	overflow-x: hidden;
 }
 .edrea_hero .overlay {
 	position: absolute;
