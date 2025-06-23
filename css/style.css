@@ -651,7 +651,7 @@ h6 {
 /* Hero Header */
 .edrea_hero {
 	position: relative;
-	overflow-x: hidden; /* This is the fix */
+	overflow-x: hidden;
 }
 .edrea_hero .overlay {
 	position: absolute;
@@ -786,7 +786,6 @@ h6 {
 }
 
 /* About */
-
 body.dark .edrea_about {
 	padding-bottom: 120px;
 }
@@ -1094,6 +1093,9 @@ body.dark .edrea_about {
 }
 
 /* Portfolio */
+.edrea_portfolio .edrea_title {
+	margin-bottom: 40px;
+}
 .edrea_portfolio_slider .item {
 	cursor: pointer;
 	border-radius: 12px;
@@ -1402,6 +1404,10 @@ body.dark .edrea_about {
 }
 
 /* Contact */
+.edrea_contact .edrea_title {
+	margin-bottom: 60px;
+	max-width: 670px;
+}
 .edrea_contact .contact_cols {
 	width: 100%;
 	display: flex;
@@ -2063,9 +2069,6 @@ body.intro .loader_line:after {
 	.edrea_services .content {
 		flex-direction: column;
 	}
-	.edrea_services {
-		padding: 70px 0;
-	}
 	.edrea_service_list h3 {
 		font-size: 18px;
 	}
@@ -2392,313 +2395,59 @@ body.intro .loader_line:after {
         bottom: 30px;
     }
 }
-/* --- Custom Styles --- */
-
-/* Social Icons Strip (Under Hero) */
-.edrea_social_icons {
-    background-color: #000;
-    padding: 10px 0 10px 0;
-    text-align: center;
-}
-
-.edrea_social_icons .footer-icons ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 25px;
-}
-
-.edrea_social_icons .footer-icons i {
-    font-size: 28px;
-    color: #FFFFFF;
-    transition: color 0.3s ease;
-}
-
-.edrea_social_icons .footer-icons a:hover i {
-    color: #dd4242;
-}
-
-
-/* Centered Footer Layout */
-.edrea_footer .content.footer-content-centered {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 0;
-}
-
-.footer-content-centered .footer-icons {
-    margin-bottom: 25px; 
-}
-
-.footer-content-centered .footer-icons ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 25px;
-}
-
-.footer-content-centered .footer-icons i {
-    font-size: 24px;
-    color: #FFFFFF;
-    transition: color 0.3s ease;
-}
-
-.footer-content-centered .footer-icons a:hover i {
-    color: #dd4242;
-}
-
-.footer-content-centered .copyright_text p {
-    text-align: center;
-    margin: 0;
-    line-height: 1.6;
-    color: #FFFFFF;
-}
-/* --- Custom Style for Music Section Description --- */
-.music-description {
-    max-width: 650px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* --- Fix for Modal Background Scrolling (Forceful) --- */
-body.modal {
-    overflow: hidden !important;
-}
-
-/* --- Contact Form Button Style Fix --- */
-.edrea_contact_form .item button,
-.edrea_contact_form .item a#send_message {
-	display: inline-block;
-	font-family: 'Poppins', sans-serif;
-	font-size: 20px;
-	font-style: normal;
-	font-weight: 500;
-	line-height: 30px;
-	letter-spacing: 0em;
-	text-align: center;
-	padding: 8px 40px;
-	text-decoration: none;
-	color: #0f172a;
-	border: 2px solid #7e7e7e;
-	border-radius: 40px;
-	overflow: hidden;
-	position: relative;
-	background-color: transparent;
-	cursor: pointer;
-	transition: all 0.3s ease;
-}
-
-.edrea_contact_form .item button:hover,
-.edrea_contact_form .item a#send_message:hover {
-	border-color: #dd4242;
-	background-color: #dd4242;
-	color: #fff;
-}
-
-body.dark .edrea_contact_form .item button,
-body.dark .edrea_contact_form .item a#send_message {
-	color: #fff;
-	border-color: #A9AFC3;
-}
-
-body.dark .edrea_contact_form .item button:hover,
-body.dark .edrea_contact_form .item a#send_message:hover {
-	border-color: #dd4242;
-	background-color: #dd4242;
-}
-/* Adds spacing below the 'Stream' button inside the modal */
-.edrea_modalbox .edrea_button {
-	margin-bottom: 30px;
-}
-/* ===================================================================
- * 20. Donation Section (Final Fix for Internal Layout)
- * ================================================================== */
-#donation {
-    background-color: #000;
-    padding: 40px 0 0;
-}
-#donation .edrea_title .description {
-    max-width: 650px;
-	margin-left: auto;
-	margin-right: auto;
-    color: #7e7e7e;
-}
-
-#donation .donation_content {
-    padding-top: 40px !important; /* MODIFIED: Reduced space from 80px to 40px */
-    clear: both;
-}
-
-#donation .donation_card {
-    max-width: 720px;
-    margin: 0 auto; 
-    background-color: #111;
-    border: 1px solid #222;
-    border-radius: 8px;
-    padding: 100px;
-}
-
-#donation .card_body {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-#donation .card_footer {
-    margin-top: 30px;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-#donation .label {
-    color: #eee;
-    font-size: 1rem;
-    margin-bottom: 25px;
-    display: block;
-    text-align: center;
-}
-
-/* MODIFIED: Converted to Flexbox for centered button layout */
-#donation .amount_grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 25px;
-    width: 100%;
-    max-width: 400px; 
-}
-#donation .amount_button {
-    background-color: #222;
-    border: 1px solid #333;
-    color: #fff;
-    padding: 12px 20px; /* Increased horizontal padding for better look */
-    font-size: 1rem;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    flex-basis: 100px; /* Gives buttons a base width */
-    text-align: center;
-}
-
-#donation .amount_button:hover,
-#donation .amount_button.active {
-    background-color: #e84545;
-    border-color: #e84545;
-}
-#donation .custom_amount_wrapper {
-    max-width: 400px;
-    width: 100%;
-    margin: 0 auto 30px auto; 
-    display: flex;
-    align-items: center;
-    border: 1px solid #333;
-    border-radius: 5px;
-    background-color: #222;
-    padding-left: 15px;
-}
-#donation .dollar_sign {
-    color: #888;
-    font-size: 1rem;
-}
-#donation .custom_amount_input {
-    width: 100%;
-    background: transparent;
-    border: none;
-    color: #fff;
-    font-size: 1rem;
-    font-family: 'Poppins', sans-serif;
-    padding: 12px 15px 12px 10px;
-}
-#donation .donate_button {
-    display: inline-block;
-    width: 100%;
-    max-width: 400px;
-    padding: 15px 20px;
-    background-color: #1693d2;
-    color: #fff;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    margin-bottom: 20px; 
-}
-#donation .donate_button:hover {
-    background-color: #127ab0;
-}
-#donation .security_notice {
-    font-size: 0.8rem;
-    color: #888;
-    margin-top: 15px;
-    text-align: center;
-}
-
-/* --- Responsive Fixes --- */
-@media screen and (max-width: 480px) {
-    /* MODIFIED: Removed the rigid 2-column grid to allow flexbox to handle responsiveness */
-    #donation .donation_card {
-        margin-top: 40px;
-        padding: 40px 20px; /* Adjusted padding for smaller screens */
-    }
-
-    #donation .card_footer {
-        margin-top: 30px;
-        width: 100%;
-        text-align: center;
-    }
-}
 /*
  * ===================================================================
- * FINAL Consistent Section Spacing
+ * Responsive Headline Animation (Final Fix)
  * ==================================================================
 */
 
-/* Default padding for all major sections */
-#about,
-#portfolio,
-#donation,
-#contact {
-    padding-top: 80px;
-    padding-bottom: 80px;
-    background-color: #000; /* Ensures consistent black background */
+/* Keyframe for Desktop & Tablet (> 768px) */
+/* This animation ends with the transform needed for desktop centering. */
+@keyframes customFadeInRight-desktop {
+  from {
+    opacity: 0;
+    transform: translateX(150%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(50%);
+  }
 }
 
-/* Specific adjustment for the "About" section */
-#about {
-    /* Smaller top padding because it's after the social icon bar */
-    padding-top: 40px;
+/* Keyframe for Mobile (<= 768px) */
+/* This animation ends with no transform, as required by the mobile layout. */
+@keyframes customFadeInRight-mobile {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-/* Spacing for smaller screens */
-@media (max-width: 1040px) {
-    #about,
-    #portfolio,
-    #donation,
-    #contact {
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
-    #about {
-        padding-top: 40px;
-    }
+/* Base class to apply the animation */
+.headline-anim {
+  /* Apply the desktop animation by default */
+  animation-name: customFadeInRight-desktop;
+  
+  /* Use the animation properties from the animate.css library */
+  animation-duration: 1s;
+  animation-fill-mode: both;
 }
-/* ===================================================================
+
+/* Media query to switch to the mobile animation on smaller screens */
+@media (max-width: 768px) {
+  .headline-anim {
+    animation-name: customFadeInRight-mobile;
+  }
+}
+/*
+ * ===================================================================
  * Social Link Icons (New Style)
- * ================================================================== */
+ * ==================================================================
+ */
 
 /* Container for the new social links */
 .social-container {
@@ -2792,73 +2541,4 @@ body.dark .edrea_contact_form .item a#send_message:hover {
 
 .footer-content-centered .footer-icons {
     margin-bottom: 0;
-}
-/*
- * ===================================================================
- * Responsive Headline Animation (Final Fix)
- * ==================================================================
-*/
-
-/* Keyframe for Desktop & Tablet (> 768px) */
-/* This animation ends with the transform needed for desktop centering. */
-@keyframes customFadeInRight-desktop {
-  from {
-    opacity: 0;
-    transform: translateX(150%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(50%);
-  }
-}
-
-/* Keyframe for Mobile (<= 768px) */
-/* This animation ends with no transform, as required by the mobile layout. */
-@keyframes customFadeInRight-mobile {
-  from {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/* Base class to apply the animation */
-.headline-anim {
-  /* Apply the desktop animation by default */
-  animation-name: customFadeInRight-desktop;
-  
-  /* Use the animation properties from the animate.css library */
-  animation-duration: 1s;
-  animation-fill-mode: both;
-}
-
-/* Media query to switch to the mobile animation on smaller screens */
-@media (max-width: 768px) {
-  .headline-anim {
-    animation-name: customFadeInRight-mobile;
-  }
-}
-/* Base class to apply the animation */
-.headline-anim {
-    /* Apply the desktop animation by default */
-    animation-name: customFadeInRight-desktop;
-    
-    /* Use the animation properties from the animate.css library */
-    animation-duration: 1s;
-    animation-fill-mode: both;
-
-    /* === UNIVERSAL DELAY === */
-    /* Set a single, consistent delay for all devices */
-    animation-delay: 2.2s;
-}
-
-/* Media query to switch to the mobile animation on smaller screens */
-/* This part is still needed to fix the positioning! */
-@media (max-width: 768px) {
-    .headline-anim {
-    animation-name: customFadeInRight-mobile;
-    }
 }
