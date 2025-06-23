@@ -2686,22 +2686,50 @@ body.dark .edrea_contact_form .item a#send_message:hover {
 }
 
 /*
- * Custom Animation Fix for Headline
- * This solves the transform conflict.
+ * ===================================================================
+ * Responsive Headline Animation (Final Fix)
+ * ==================================================================
 */
-@keyframes customFadeInRight {
+
+/* Keyframe for Desktop & Tablet (> 768px) */
+/* This animation ends with the transform needed for desktop centering. */
+@keyframes customFadeInRight-desktop {
   from {
     opacity: 0;
-    /* Start position: 100% to the right of its final centered position */
     transform: translateX(150%);
   }
   to {
     opacity: 1;
-    /* Final position: The original centering transform */
     transform: translateX(50%);
   }
 }
 
-.custom-fade-in-right {
-  animation-name: customFadeInRight;
+/* Keyframe for Mobile (<= 768px) */
+/* This animation ends with no transform, as required by the mobile layout. */
+@keyframes customFadeInRight-mobile {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Base class to apply the animation */
+.headline-anim {
+  /* Apply the desktop animation by default */
+  animation-name: customFadeInRight-desktop;
+  
+  /* Use the animation properties from the animate.css library */
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+/* Media query to switch to the mobile animation on smaller screens */
+@media (max-width: 768px) {
+  .headline-anim {
+    animation-name: customFadeInRight-mobile;
+  }
 }
