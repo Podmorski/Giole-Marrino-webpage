@@ -2684,3 +2684,7 @@ body.dark .edrea_contact_form .item a#send_message:hover {
         text-align: center;
     }
 }
+/* Fix for headline animation timing */
+.edrea_hero .title.hidden-for-anim {
+	opacity: 0;
+}
