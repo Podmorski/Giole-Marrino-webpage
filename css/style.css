@@ -2491,6 +2491,7 @@ body.intro .loader_line:after {
     max-width: 650px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 0;	
 }
 
 /* --- Fix for Modal Background Scrolling (Forceful) --- */
