@@ -651,7 +651,7 @@ h6 {
 /* Hero Header */
 .edrea_hero {
 	position: relative;
-	overflow-x: hidden;
+	overflow-x: hidden; /* This is the fix */
 }
 .edrea_hero .overlay {
 	position: absolute;
@@ -787,9 +787,6 @@ h6 {
 
 /* About */
 
-.edrea_about {
-	padding-top: 30px;
-}
 body.dark .edrea_about {
 	padding-bottom: 120px;
 }
@@ -1097,12 +1094,6 @@ body.dark .edrea_about {
 }
 
 /* Portfolio */
-.edrea_portfolio {
-	padding: 60px 0;
-}
-.edrea_portfolio .edrea_title {
-	margin-bottom: 40px;
-}
 .edrea_portfolio_slider .item {
 	cursor: pointer;
 	border-radius: 12px;
@@ -1411,14 +1402,6 @@ body.dark .edrea_about {
 }
 
 /* Contact */
-.edrea_contact {
-	background-color: #f9f9fc;
-	padding: 70px 0;
-}
-.edrea_contact .edrea_title {
-	margin-bottom: 60px;
-	max-width: 670px;
-}
 .edrea_contact .contact_cols {
 	width: 100%;
 	display: flex;
@@ -2113,12 +2096,7 @@ body.intro .loader_line:after {
 	.edrea_information .edrea_title {
 		margin-bottom: 34px;
 	}
-	.edrea_portfolio {
-		padding: 70px 0;
-	}
-	.edrea_portfolio .edrea_title {
-		margin-bottom: 40px;
-	}
+
 	.edrea_testimonials .testi_left {
 		width: 100%;
 		padding: 0 0 40px;
@@ -2158,9 +2136,7 @@ body.intro .loader_line:after {
 	.edrea_contact .contact_left li {
 		margin-bottom: 19px;
 	}
-	.edrea_contact {
-		padding: 70px 0;
-	}
+
 	.edrea_contact .contact_left h3 {
 		font-size: 16px;
 		margin-bottom: 3px;
@@ -2685,7 +2661,138 @@ body.dark .edrea_contact_form .item a#send_message:hover {
         text-align: center;
     }
 }
+/*
+ * ===================================================================
+ * FINAL Consistent Section Spacing
+ * ==================================================================
+*/
 
+/* Default padding for all major sections */
+#about,
+#portfolio,
+#donation,
+#contact {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #000; /* Ensures consistent black background */
+}
+
+/* Specific adjustment for the "About" section */
+#about {
+    /* Smaller top padding because it's after the social icon bar */
+    padding-top: 40px;
+}
+
+/* Spacing for smaller screens */
+@media (max-width: 1040px) {
+    #about,
+    #portfolio,
+    #donation,
+    #contact {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    #about {
+        padding-top: 40px;
+    }
+}
+/* ===================================================================
+ * Social Link Icons (New Style)
+ * ================================================================== */
+
+/* Container for the new social links */
+.social-container {
+    display: flex;
+    gap: 35px; /* Space between icons */
+    align-items: flex-start; /* Aligns items to the top */
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 15px 0;
+}
+
+/* Individual link style */
+.social-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #FFFFFF;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+.social-link:hover {
+    opacity: 1;
+    transform: translateY(-3px); /* Slight lift on hover */
+}
+
+/* Icon styling (for Font Awesome) */
+.social-link i {
+    font-size: 32px; /* Icon size */
+    width: 40px;
+    height: 40px;
+    margin-bottom: 12px;
+    transition: color 0.3s ease;
+    color: #FFFFFF; /* Default icon color */
+}
+
+/* Text label styling */
+.social-name {
+    font-family: 'Poppins', sans-serif; /* Using your site's font */
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* --- Hover colors for each platform --- */
+
+.social-link.spotify:hover i {
+    color: #1db954;
+}
+
+.social-link.apple-music:hover i {
+    color: #fc3c44;
+}
+
+.social-link.youtube:hover i {
+    color: #ff0000;
+}
+
+.social-link.instagram:hover i {
+    color: #e4405f;
+}
+
+.social-link.soundcloud:hover i {
+    color: #ff5500;
+}
+
+.social-link.artlist:hover i {
+    /* A generic cool color since Artlist doesn't have a strong brand color */
+    color: #6c5ce7;
+}
+
+
+/* Styling for the social strip under the hero */
+.edrea_social_icons {
+    background-color: #000;
+    text-align: center;
+}
+
+/* Ensure footer icons are also white */
+.edrea_footer .social-link,
+.edrea_footer .social-link i {
+    color: #FFFFFF;
+}
+
+/* Remove padding from the old footer structure */
+.edrea_footer .content.footer-content-centered {
+    padding: 20px 0 0 0;
+}
+
+.footer-content-centered .footer-icons {
+    margin-bottom: 0;
+}
 /*
  * ===================================================================
  * Responsive Headline Animation (Final Fix)
@@ -2734,37 +2841,24 @@ body.dark .edrea_contact_form .item a#send_message:hover {
     animation-name: customFadeInRight-mobile;
   }
 }
-/*
- * ===================================================================
- * Consistent Section Spacing
- * ==================================================================
-*/
+/* Base class to apply the animation */
+.headline-anim {
+    /* Apply the desktop animation by default */
+    animation-name: customFadeInRight-desktop;
+    
+    /* Use the animation properties from the animate.css library */
+    animation-duration: 1s;
+    animation-fill-mode: both;
 
-/* Default padding for all major sections on desktop */
-#about,
-#portfolio,
-#donation,
-#contact {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    /* === UNIVERSAL DELAY === */
+    /* Set a single, consistent delay for all devices */
+    animation-delay: 2.2s;
 }
 
-/* Specific adjustment for the "About" section */
-/* It needs less top padding because it follows the social icon bar. */
-#about {
-    padding-top: 40px;
-}
-
-/* Responsive adjustments for tablet and mobile */
-@media (max-width: 1040px) {
-    #about,
-    #portfolio,
-    #donation,
-    #contact {
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
-    #about {
-        padding-top: 40px;
+/* Media query to switch to the mobile animation on smaller screens */
+/* This part is still needed to fix the positioning! */
+@media (max-width: 768px) {
+    .headline-anim {
+    animation-name: customFadeInRight-mobile;
     }
 }
