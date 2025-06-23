@@ -2685,3 +2685,23 @@ body.dark .edrea_contact_form .item a#send_message:hover {
     }
 }
 
+/*
+ * Custom Animation Fix for Headline
+ * This solves the transform conflict.
+*/
+@keyframes customFadeInRight {
+  from {
+    opacity: 0;
+    /* Start position: 100% to the right of its final centered position */
+    transform: translateX(150%);
+  }
+  to {
+    opacity: 1;
+    /* Final position: The original centering transform */
+    transform: translateX(50%);
+  }
+}
+
+.custom-fade-in-right {
+  animation-name: customFadeInRight;
+}
