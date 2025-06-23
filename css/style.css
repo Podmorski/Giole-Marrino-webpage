@@ -2734,3 +2734,37 @@ body.dark .edrea_contact_form .item a#send_message:hover {
     animation-name: customFadeInRight-mobile;
   }
 }
+/*
+ * ===================================================================
+ * Consistent Section Spacing
+ * ==================================================================
+*/
+
+/* Default padding for all major sections on desktop */
+#about,
+#portfolio,
+#donation,
+#contact {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+/* Specific adjustment for the "About" section */
+/* It needs less top padding because it follows the social icon bar. */
+#about {
+    padding-top: 40px;
+}
+
+/* Responsive adjustments for tablet and mobile */
+@media (max-width: 1040px) {
+    #about,
+    #portfolio,
+    #donation,
+    #contact {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    #about {
+        padding-top: 40px;
+    }
+}
