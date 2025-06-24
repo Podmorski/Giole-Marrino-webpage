@@ -2753,7 +2753,7 @@ body.dark .edrea_contact_form .item a#send_message:hover {
 /* Specific adjustment for the "About" section */
 /* It needs less top padding because it follows the social icon bar. */
 #about {
-    padding-top: 40px;
+    padding-top: 20px;
 }
 
 /* Responsive adjustments for tablet and mobile */
@@ -2762,10 +2762,10 @@ body.dark .edrea_contact_form .item a#send_message:hover {
     #portfolio,
     #donation,
     #contact {
-        padding-top: 60px;
-        padding-bottom: 60px;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
     #about {
-        padding-top: 40px;
+        padding-top: 20px;
     }
 }
