@@ -2746,8 +2746,8 @@ body.dark .edrea_contact_form .item a#send_message:hover {
 #portfolio,
 #donation,
 #contact {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 /* Specific adjustment for the "About" section */
