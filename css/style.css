@@ -795,10 +795,10 @@ body.dark .edrea_about {
 }
 @media (max-width: 768px) {
 	body.dark .edrea_about {
-		padding-bottom: 60px;
+		padding-bottom: 20px;
 	}
 	.edrea_about {
-		padding-top: 60px;
+		padding-top: 20px;
 	}
 }
 .edrea_about .about_in {
@@ -1098,7 +1098,7 @@ body.dark .edrea_about {
 
 /* Portfolio */
 .edrea_portfolio {
-	padding: 60px 0;
+	padding: 20px 0;
 }
 .edrea_portfolio .edrea_title {
 	margin-bottom: 40px;
