@@ -102,7 +102,7 @@
 
     donation_fx: function(){
         var self = this;
-        var section = $('.edrea_donation_section');
+        var section = $('#donation');
         if(section.length){
             var paypal_user = 'kuksaudio'; // IMPORTANT: Replace with your client's PayPal.me username
             var amount_buttons = section.find('.amount_button');
@@ -495,3 +495,4 @@
 })(jQuery);
 
 jQuery(".anchor_nav").onePageNav();
+
